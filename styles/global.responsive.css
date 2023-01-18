@@ -1,0 +1,132 @@
+
+
+@media screen and ( max-width: 1150px ) {
+
+    /* Componente HomePage */
+
+    .container-content{
+        flex-direction: column;
+    }
+
+    .container-instagram iframe{
+        width: 45vh;
+        height: 45vh;
+    }
+
+    .posts-instagram{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+}
+
+@media screen and ( max-width: 850px ) {
+
+    /* Componente PostCard */
+
+    .container-title-card h2{
+        font-size: 20px;
+    }
+
+    .container-title-card p{
+        font-size: 12px;
+    }
+
+    /* Componente PostInstagram */
+
+    .posts-instagram{
+        gap: 0;
+    }
+
+    .container-instagram iframe{
+        width: 38vh;
+        height: 35vh;
+      }
+
+}
+
+@media screen and ( max-width: 700px ) {
+
+    /* Estilos Navbar */
+
+    nav .input-navbar{
+        display: none;
+    }
+
+   /* Componente PostCard */
+
+   .container-description-card{
+        display: none;
+   }
+
+   .container-title-card{
+        width: 100%;
+    }
+
+    /* Componente posts/[slug] */
+
+    .container-post-byslug{
+        padding: 0px 30px;
+    }
+
+   /* Componentes Frames */
+
+    .posts{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container-posts-social iframe{
+        width: 100%;
+    }
+
+    .posts-instagram iframe{
+        width: 90%;
+    }
+
+}
+
+@media screen and ( max-width: 500px ) {
+
+    /* Componente Navbar */
+
+    nav{
+        overflow: hidden;
+    }
+
+    nav h3 {
+        padding-right: 10px;
+    }
+
+    /* Estilos globales */
+
+    .u-center{
+        padding: 0px 20px;
+    }
+
+    /* Componente Navbar  */
+
+    .container-navbar-icons{
+        gap: 15px;
+    }
+
+    /* Componente PostCard */
+
+    .container-title-card h2{
+        font-size: 15px;
+    }
+
+    /* Componentes Frames */
+
+    .posts-instagram iframe{
+        width: 90%;
+        height: 30vh;
+
+    }
+
+    /* Componete Footer */
+
+    footer h3{
+        font-size: 10px;
+    }
+}

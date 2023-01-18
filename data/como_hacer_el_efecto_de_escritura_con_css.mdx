@@ -1,0 +1,60 @@
+---
+title: 'Efecto de escritura en CSS'
+date: '2023-01-13'
+imgTitle: 'css.png'
+description: 'El efecto de escritura en las páginas web es uno de los más conocidos y estéticos. Mira cómo hacerlo.😉'
+---
+
+En **JavaScript**, un Array es una `estructura` de datos que nos permite almacenar una colección de elementos. Estos elementos pueden ser de cualquier tipo, incluso pueden ser otros Arrays.
+
+Normalmente los Arrays se inicializan de forma vacía y luego se van añadiendo elementos. Sin embargo, en ocasiones, puede ser útil inicializar un Array con valores.
+
+En este artículo te voy a enseñar como inicializar un Array con valores en JavaScript.
+
+``` html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="text">
+        <h1>Tu texto preferido (ArmandoCode)</h1>
+    </div>
+    
+</body>
+</html>
+```
+
+```css
+.text{
+    display: inline-block;
+}
+
+.text h1{
+
+    font-size: 4rem;
+    color: black;
+    overflow: hidden;
+    border-right: .20em solid rgb(0, 128, 248);
+    white-space: nowrap;
+    animation: typing 1.5s steps(20, end) forwards, 
+    blinking 1s infinite;
+
+}
+
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes blinking {
+    from {border-color: transparent;}
+    to {border-color: rgb(0, 128, 248);}
+}
+```
