@@ -33,7 +33,7 @@ export const Navbar = ({ posts }) => {
             setHideSearchMenu('disabled')
         }
         
-    }, [searchQuery])
+    }, [searchQuery, posts])
     
 
     return (

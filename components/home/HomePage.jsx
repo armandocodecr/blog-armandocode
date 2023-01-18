@@ -17,7 +17,7 @@ export const HomePage = ( {posts} ) => {
             if( i <= nextPage && i >= prevPage ) return post;
         }))
 
-    }, [nextPage, prevPage])
+    }, [nextPage, prevPage, posts])
     
     const changePage = (next) => {
         if( next ) {
@@ -53,7 +53,7 @@ export const HomePage = ( {posts} ) => {
                 </div>
 
                 <div className="container-posts-social">
-                    <h1>Podcast's recomendados</h1>
+                    <h1>Podcast recomendados</h1>
                     <div className="posts-podcast posts">
                         < Podcast episode={'3oosd3Y7oM3DAsXusY7rai'} />
                         < Podcast episode={'5fd78Wp41IhaoKWVKBoS3C'} />

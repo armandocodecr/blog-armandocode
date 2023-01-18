@@ -23,7 +23,14 @@ const PostPage = ({ source, frontMatter }) => {
                         <Image src={rutaImg} width={75} height={75} alt="imagen del titulo" />
                         <div className="container-title-card">
                             <h1>{title}</h1>
-                            <p><a href="https://www.linkedin.com/in/armando-murillo/" target='_blank'>Armando Murillo</a> | { dateFormat }</p>
+                            <p>
+                                <a 
+                                href="https://www.linkedin.com/in/armando-murillo/" 
+                                target='_blank' 
+                                rel="noreferrer">Armando Murillo
+                                </a> 
+                                | { dateFormat }
+                            </p>
                         </div>
                     </div>
 
