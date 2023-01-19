@@ -5,14 +5,9 @@ body{
   /* padding: 0px 20ch; */
   background-color: #000d29f5;
   margin: 0;
-  padding-bottom: 50px;
+  padding: 0;
   box-sizing: border-box;
   font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
-}
-
-body p{
-  height: auto;
-  max-width: 75ch;
 }
 
 /* Estilos globales */
@@ -258,6 +253,8 @@ ul{
 }
 
 .container-content-post{
+  width: 100%;
+  max-width: 75ch;
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -317,6 +314,7 @@ footer{
   width: 80%;
   height: 20px;
   margin-top: 50px;
+  padding-bottom: 20px;
   border-top: 1px solid #0076b563;
 }
 
