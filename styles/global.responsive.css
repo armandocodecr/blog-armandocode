@@ -130,6 +130,10 @@
 
     /* Componente pages/slug.tsx */
 
+    .container-post-byslug{
+        margin-top: 30px;
+    }
+
     .container-content-post img{
         width: 10vh;
         height: 8vh;
@@ -145,6 +149,10 @@
 
     #content-post p{
         font-size: 15px;
+    }
+
+    code{
+        padding: 3px;
     }
 
     /* Componete Footer */
