@@ -14,11 +14,11 @@ export const BlogLayout = ({ title, pageDescription, posts, children }) => {
             <meta name="og:description" content={ pageDescription } />
         </Head>
 
-        <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="u-center dark-theme">
+        <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="u-center">
             <Navbar posts={posts} />
         </nav>
 
-        <main className="dark-theme"
+        <main
         >
             { children }
         </main>

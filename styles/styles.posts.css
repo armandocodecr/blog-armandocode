@@ -35,12 +35,13 @@ h2{
       }
 
     .container-content-post p{
+        width: 90%;
         font-size: 0.9rem;
     }
 
     pre code.hljs{
-        display: inline;
-        width: 58ch !important;
+        width: auto;
+        width: 55ch !important;
     }
 
     
