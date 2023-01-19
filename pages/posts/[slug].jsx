@@ -34,7 +34,7 @@ const PostPage = ({ source, frontMatter }) => {
                         </div>
                     </div>
 
-                    <div style={{ position: 'relative', width: '100%' }}>
+                    <div style={{ position: 'relative', width: '100%' }} id="content-post">
                         <MDXRemote {...source} />
                     </div>
                 </div>

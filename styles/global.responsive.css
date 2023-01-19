@@ -66,7 +66,7 @@
     /* Componente posts/[slug] */
 
     .container-post-byslug{
-        padding: 0px 30px;
+        padding: 0px 16px;
     }
 
    /* Componentes Frames */
@@ -128,6 +128,24 @@
 
     }
 
+    /* Componente pages/slug.tsx */
+
+    .container-content-post img{
+        width: 10vh;
+        height: 8vh;
+    } 
+
+    .container-content-post h1{
+        font-size: 21px;
+    } 
+
+    .container-content-post h2{
+        font-size: 19px;
+    } 
+
+    #content-post p{
+        font-size: 15px;
+    }
 
     /* Componete Footer */
 
