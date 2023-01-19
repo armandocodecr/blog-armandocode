@@ -26,42 +26,39 @@ Como se muestra en el siguiente caso. 👇
 
 ❌
 ```js
-    const num1 = 10;
-    const num2 = 5;
-
-    const validacionEntreNumeros = ( num1, num2 ) => {
-        if( num1 > num2 ){
-            return true;
-        }else {
-            return false;
-        }
+const num1 = 10;
+const num2 = 5;
+const validacionEntreNumeros = ( num1, num2 ) => {
+    if( num1 > num2 ){
+        return true;
+    }else {
+        return false;
     }
+}
 ```
 
 O el mismo caso, pero usando ternarias.
 
 ❌
 ```js
-    const num1 = 10;
-    const num2 = 5;
-
-    const validacionEntreNumeros = ( num1, num2 ) => {
-        return num1 > num2 
-        ? true 
-        : false;
-    }
+const num1 = 10;
+const num2 = 5;
+const validacionEntreNumeros = ( num1, num2 ) => {
+    return num1 > num2 
+    ? true 
+    : false;
+}
 ```
 
 Por lo que, en un caso como este, es recomendable devolver directamente la condición.
 
 ✅
 ```js
-    const num1 = 10;
-    const num2 = 5;
-
-    const validacionEntreNumeros = ( num1, num2 ) => {
-        return num1 > num2;
-    }
+const num1 = 10;
+const num2 = 5;
+const validacionEntreNumeros = ( num1, num2 ) => {
+    return num1 > num2;
+}
 ```
 
 Mucho más limpio, **verdad?**
@@ -71,11 +68,11 @@ Mucho más limpio, **verdad?**
 Si tenemos el siguiente array de objetos. 👇
 
 ```js
-    const personas = [
-        { name: 'Karla', age: 14 },
-        { name: 'Jack', age: 17 },
-        { name: 'Jonathan', age: 15 }
-    ]
+const personas = [
+    { name: 'Karla', age: 14 },
+    { name: 'Jack', age: 17 },
+    { name: 'Jonathan', age: 15 }
+]
 ```
 
 Y queremos buscar si alguna de las personas de los objetos es mayor de edad. Donde en caso de que sí haya, devolverá **true**
@@ -86,15 +83,14 @@ De esta manera. 👇
 
 ❌
 ```js
-    const personas = [
-        { name: 'Karla', age: 14 },
-        { name: 'Jack', age: 17 },
-        { name: 'Jonathan', age: 15 }
-    ]
-
-    Boolean(personas.filter(persona => {
-        return persona.age >= 18;
-    })[0])
+const personas = [
+    { name: 'Karla', age: 14 },
+    { name: 'Jack', age: 17 },
+    { name: 'Jonathan', age: 15 }
+]
+Boolean(personas.filter(persona => {
+    return persona.age >= 18;
+})[0])
 ```
 
 Esta manera es **horrible**, ya que debemos acceder a la primera posición, y además de eso tenemos que convertir todo en un Booleano.
@@ -106,19 +102,17 @@ Como el siguiente ejemplo. 👇
 
 ❌
 ```js
-    const personas = [
-        { name: 'Karla', age: 14 },
-        { name: 'Jack', age: 17 },
-        { name: 'Jonathan', age: 15 }
-    ]
-
-    let found = false;
-
-    personas.forEach(persona => {
-        if( !found ) {
-            found = persona.age >= 18;
-        }
-    })
+const personas = [
+    { name: 'Karla', age: 14 },
+    { name: 'Jack', age: 17 },
+    { name: 'Jonathan', age: 15 }
+]
+let found = false;
+personas.forEach(persona => {
+    if( !found ) {
+        found = persona.age >= 18;
+    }
+})
 ```
 
 Esto no es correcto, ya que lo que hará es recorrer todos los objetos **idenpendientemente** de si lo a encontrado ya.🤦‍♂️
@@ -129,15 +123,14 @@ De esta manera. 👇
 
 ✅
 ```js
-    const personas = [
-        { name: 'Karla', age: 14 },
-        { name: 'Jack', age: 17 },
-        { name: 'Jonathan', age: 15 }
-    ]
-
-    personas.some((persona) => {
-        return persona.age >= 18;
-    })
+const personas = [
+    { name: 'Karla', age: 14 },
+    { name: 'Jack', age: 17 },
+    { name: 'Jonathan', age: 15 }
+]
+personas.some((persona) => {
+    return persona.age >= 18;
+})
 ```
 
 Esta es la mejora forma de hacerlo, ya que el método `some` devolverá **true** al primer elemento que cumpla la condición.👌

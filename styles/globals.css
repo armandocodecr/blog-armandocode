@@ -305,7 +305,6 @@ code.hljs{
 }
 
 pre code.hljs{
-  position: inherit;
   width: 100% !important;
   min-width: 250px;
   padding: 15px 20px !important;
