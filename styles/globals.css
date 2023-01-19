@@ -253,6 +253,7 @@ ul{
   justify-content: center;
   align-content: center;
   align-items: center;
+  flex-direction: column;
   margin-top: 50px;
 }
 
@@ -292,24 +293,28 @@ ul{
   color: white;
 }
 
-code{
+.container-content-post h2{
+  color: white;
+} 
+
+/* code{
   padding: 5px;
   background-color: #0076b570;
   border-radius: 5px;
-}
+} */
 
-code.hljs{
+/* code.hljs{
   background-color: transparent !important;
   padding: 0 !important;
   font-size: 17px;
-}
+} */
 
 pre code.hljs{
-  width: 100% !important;
+  /* width: 100% !important;
   min-width: 250px;
   padding: 15px 20px !important;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 5px; */
   background-color: #0076b51e !important;
 }
 

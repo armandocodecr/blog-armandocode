@@ -34,7 +34,9 @@ const PostPage = ({ source, frontMatter }) => {
                         </div>
                     </div>
 
-                    <MDXRemote {...source} />
+                    <div style={{ position: 'relative', width: '100%' }}>
+                        <MDXRemote {...source} />
+                    </div>
                 </div>
             </section>
         </BlogLayout>
