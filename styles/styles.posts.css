@@ -6,7 +6,7 @@ h2{
 @media screen and ( max-width: 700px ) {
 
     pre code.hljs{
-        width: 60ch !important;
+        width: 90% !important;
     }
 
     
@@ -38,9 +38,8 @@ h2{
         font-size: 0.9rem;
     }
 
-    pre code.hljs{
-        width: auto;
-        width: 55ch !important;
+    code {
+        padding: 2px;
     }
 
     
@@ -66,10 +65,6 @@ h2{
 
     .container-content-post p{
         font-size: 0.7rem;
-    }
-
-    pre code.hljs{
-        width: 60ch !important;
     }
 
     
