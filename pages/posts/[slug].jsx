@@ -43,7 +43,7 @@ const PostPage = ({ source, frontMatter }) => {
                         <p>
                             < FaGithub style={{ color: 'white' }} /> 
                             ¿Ves alguna errata o quiere sugerir algo? 
-                            <a href={`https://github.com/Armandocm19/blog-armandocode/blob/main/data/${slug}.mdx`} target='_blank'>
+                            <a href={`https://github.com/Armandocm19/blog-armandocode/blob/main/data/${slug}.mdx`} target='_blank' rel="noreferrer">
                                 Haz un pull request
                             </a>
                         </p>
