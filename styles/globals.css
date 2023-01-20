@@ -162,6 +162,10 @@ ul{
   grid-template-rows: 1fr 1fr;
 }
 
+.container-instagram{
+  padding: 0 10px;
+}
+
 .container-instagram iframe{
   width: 35vh;
   height: 40vh;
@@ -212,6 +216,11 @@ ul{
   transition: background-color .2s ease-in-out, transform .2s ease-in-out;
 }
 
+.article-container-post h2{
+  min-width: 250px;
+  font-size: 20px;
+}
+
 .article-container-post:hover{
   background-color: #0076b51c;
 }
@@ -227,7 +236,7 @@ ul{
 }
 
 .container-title-card{
-  width: 55%;
+  width: 60%;
   padding-left: 20px;
 }
 
@@ -280,12 +289,12 @@ ul{
   margin: 0 !important;
 }
 
-.container-postTitle-byslug img{
+.container-postTitle-byslug #img-title{
   width: 12vh;
   height: 10vh;
 }
 
-.container-content-post p{
+#content-post p{
   margin-top: 25px;
   max-width: 75ch;
   font-size: 1.125rem;
@@ -293,17 +302,33 @@ ul{
   color: white;
 }
 
+.container-title-card a{
+  padding-right: 7px;
+}
+
 .container-content-post h2{
   color: white;
-} 
+}
+
+#content-post a{
+  font-size: 22px !important;
+  color: #1da0f2;
+}
+
+.container-content-post img{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 
 code{
-  padding: 5px;
-  background-color: #1da0f256;
+  padding: 2px 5px;
+  background-color: #1da0f233 !important;
   border-radius: 3px;
 }
 
 code.hljs{
+  font-size: 15px;
   border-radius: 5px;
 }
 

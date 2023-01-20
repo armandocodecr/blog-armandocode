@@ -59,17 +59,17 @@ export const HomePage = ( {posts} ) => {
                         < Podcast episode={'5fd78Wp41IhaoKWVKBoS3C'} />
                     </div>
                     <h1>Último video en Youtube</h1>
-                        <div className="posts-youtube posts">
-                            < Youtube id={'_JGk6zS2ZbQ'} />
-                        </div>
+                    <div className="posts-youtube posts">
+                        < Youtube id={'_JGk6zS2ZbQ'} />
                     </div>
+                </div>
                 </div>
                 <div className="container-instagram">
                     <h1>Ultimos posts en Instagram</h1>
                     <div className="posts-instagram">
                         < PostInstagram id={'CnQXVh-rFf3'} />
                         < PostInstagram id={'Cm7cKW8vhPB'} />
-                    </div>
+                </div>
             </div>
         </section>
     )

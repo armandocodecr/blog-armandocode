@@ -80,8 +80,19 @@
         width: 100%;
     }
 
+    .posts-instagram{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .posts-instagram iframe:nth-child(1n){
+        margin-top: 20px;
+    }
+
     .posts-instagram iframe{
-        width: 90%;
+        margin: 0 auto;
+        width: 70%;
+        height: 400px;
     }
 
 }
@@ -114,6 +125,12 @@
         font-size: 20px;
     }
 
+    /* Componente HomePage */
+
+    .article-container-post h2{
+        min-width: 200px;
+    }
+
     /* Componente PostCard */
 
     .container-title-card h2{
@@ -124,8 +141,7 @@
 
     .posts-instagram iframe{
         width: 90%;
-        height: 30vh;
-
+        height: 350px;
     }
 
     /* Componente pages/slug.tsx */
@@ -134,14 +150,24 @@
         margin-top: 30px;
     }
 
-    .container-content-post img{
-        width: 10vh;
-        height: 8vh;
+    .container-postTitle-byslug img{
+        width: 10vh !important;
+        height: 8vh !important;
     } 
 
-    .container-content-post h1{
-        font-size: 21px;
+    .container-title-card h1{
+        font-size: 15px;
     } 
+
+    #content-post img{
+        width: 90% !important;
+        height: auto !important;
+    }
+
+    #content-post a{
+        font-size: 14px !important;
+      }
+
 
     .container-content-post h2{
         font-size: 19px;
@@ -153,6 +179,11 @@
 
     code{
         padding: 3px;
+    }
+
+    code.hljs{
+        font-size: 12px;
+        border-radius: 5px;
     }
 
     /* Componete Footer */

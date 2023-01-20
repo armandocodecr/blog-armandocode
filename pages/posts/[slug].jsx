@@ -20,7 +20,7 @@ const PostPage = ({ source, frontMatter }) => {
             <section className="container-post-byslug">
                 <div className="container-content-post">
                     <div className="container-postTitle container-postTitle-byslug">
-                        <Image src={rutaImg} width={75} height={75} alt="imagen del titulo" />
+                        <Image src={rutaImg} width={75} height={75} alt="imagen del titulo" id="img-title" />
                         <div className="container-title-card">
                             <h1>{title}</h1>
                             <p>

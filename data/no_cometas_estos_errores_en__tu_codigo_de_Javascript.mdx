@@ -134,3 +134,64 @@ personas.some((persona) => {
 ```
 
 Esta es la mejora forma de hacerlo, ya que el método `some` devolverá **true** al primer elemento que cumpla la condición.👌
+
+## 3° Caso: Usar `var` en vez de `let` y `const`
+
+Hoy en día no es recomendable definir variables con la palabra reservada `var`. Ya que este nos puede generar problemas en nuestro código.
+Y uno de los principales problemas de este es que no nos da error al redeclarar una variable. Lo cuál es muy peligroso para nuestras aplicaciones.
+
+Un ejemplo de este probleba es el siguiente:
+```js
+var valor = 1;
+console.log(valor) // 1
+var valor = 'Armando'
+console.log(valor); //Armando
+var valor = true;
+console.log(valor); // true
+```
+
+Otro caso un poco más claro es el siguiente:
+
+❌ Usando `var`. 👇
+
+```js
+var name = 'Armando'
+if (name === 'Armando') {
+  var name = 'Guillermo'
+}
+console.log(name) // 'Guillermo'
+```
+
+✅ Usando `let` y `const`. 👇
+
+```js
+const name = 'Armando'
+if (name === 'Armando') {
+  let name = 'Guillermo'
+}
+console.log(Armando) // 'Armando'
+```
+
+En conclusión, siempre trata en la medida de los posible hacer uso de las palabras reservadas `let` y `const` para declarar variables en tú código.
+Te ahorrará muchos problemas. 😉
+
+## 4° Caso: Usar `==` en vez de `===` para comparar valores.
+
+El operador `==` no es recomendable utilizarlo para comparar valores, ya que este **NO** compara si las variables son de diferente tipo.
+A diferencia del operador `===` que si compara tanto el valor como el tipo de los valores que se están comparando.
+
+❌ 
+```js
+const string == '21'
+const number == 21
+
+string == number; // true
+```
+
+✅ 
+```js
+const string = '21'
+const number = 21
+
+string === number; // false
+```
