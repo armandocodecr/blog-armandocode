@@ -1,15 +1,20 @@
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 import { MDXRemote } from "next-mdx-remote";
 
 import { getFileBySlug, getFiles } from "@/lib/mdx";
 import { BlogLayout } from "@/components/layouts";
+import { FaGithub } from "react-icons/fa";
 
 import "highlight.js/styles/atom-one-dark.css"
 import { formatDate } from "@/utils";
 
 const PostPage = ({ source, frontMatter }) => {
-    
+
+    const { asPath } = useRouter();
+    const slug = asPath.slice(7, asPath.length);
+
     const { title, date, imgTitle } = frontMatter;
     const rutaImg = `/img/posts/${imgTitle}`;
 
@@ -32,6 +37,16 @@ const PostPage = ({ source, frontMatter }) => {
                                 | { dateFormat }
                             </p>
                         </div>
+                    </div>
+
+                    <div id="container-aditional-info">
+                        <p>
+                            < FaGithub style={{ color: 'white' }} /> 
+                            ¿Ves alguna errata o quiere sugerir algo? 
+                            <a href={`https://github.com/Armandocm19/blog-armandocode/blob/main/data/${slug}.mdx`} target='_blank'>
+                                Haz un pull request
+                            </a>
+                        </p>
                     </div>
 
                     <div style={{ position: 'relative', width: '100%' }} id="content-post">

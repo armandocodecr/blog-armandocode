@@ -12,6 +12,14 @@ body{
 
 /* Estilos globales */
 
+:root{
+  --a-color: #0077B5;
+  --a-linkedin: #0077B5;
+  --a-instagram: #bc2a8d;
+  --a-twitter: #1DA1F2;
+  --a-github: #F1502F;
+}
+
 .u-center{
   max-width: 1200px;
   margin: 0 auto;
@@ -76,11 +84,11 @@ ul{
 }
 
 #linkedin:hover{
-  color: #0077B5
+  color: #0077B5;
 }
 
 #twitter:hover{
-  color: #1DA1F2
+  color: #1DA1F2;
 }
 
 .input-navbar{
@@ -276,7 +284,6 @@ ul{
 }
 
 .container-postTitle-byslug h1{
-  max-width: 50vh;
   color: white;
   margin: 0;
   font-size: 25px;
@@ -292,6 +299,27 @@ ul{
 .container-postTitle-byslug #img-title{
   width: 12vh;
   height: 10vh;
+}
+
+#container-aditional-info{
+  margin-top: 10px;
+}
+
+#container-aditional-info svg{
+  padding-right: 5px;
+  font-size: 20px;
+}
+
+#container-aditional-info p{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 15px;
+}
+
+#container-aditional-info a{
+  padding-left: 5px;
+  color: var(--a-github);
 }
 
 #content-post p{
@@ -312,7 +340,7 @@ ul{
 
 #content-post a{
   font-size: 22px !important;
-  color: #1da0f2;
+  color: var(--a-color)
 }
 
 .container-content-post img{
