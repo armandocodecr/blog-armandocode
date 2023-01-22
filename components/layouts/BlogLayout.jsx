@@ -9,6 +9,7 @@ export const BlogLayout = ({ title, pageDescription, posts, children }) => {
         <Head>
             <title>{title}</title>
             <meta name="decription" content={ pageDescription } />
+            <meta property="decription" content="Este es mi Blog personal (ArmandoCode), donde podrás encontrar posts muy interesantes si eres desarrollador de software 👨‍💻" />
 
             <meta name="og:title" content={ title } />
             <meta property="og:image" content="https://res.cloudinary.com/dyuj1zglt/image/upload/v1674369118/cg0gxsyxgoszk9eozofp.png" />
