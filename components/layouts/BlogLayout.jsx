@@ -18,14 +18,15 @@ export const BlogLayout = ({ title, pageDescription, posts, children }) => {
             <meta name="image" property="og:image" content="https://res.cloudinary.com/dyuj1zglt/image/upload/v1674407383/ahxonr3ssagn8qbllgkx.png" />
             <meta property="og:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
 
-            <meta property="twitter:site" content="@CodeArmando" />
-            <meta property="twitter:creator" content="@CodeArmando" />
-            <meta property="twitter:card" content="summary" />
-            <meta property="twitter:title" content={ title } />
+            <meta name="twitter:site" content="@CodeArmando" />
+            <meta name="twitter:creator" content="@CodeArmando" />
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:domain" content="armando-murillo.vercel.app" />
+            <meta name="twitter:title" content={ title } />
             <meta property="twitter:url" content="https://armando-murillo.vercel.app/" />
-            <meta property="twitter:image" content="https://res.cloudinary.com/dyuj1zglt/image/upload/v1674407383/ahxonr3ssagn8qbllgkx.png" />
-            <meta property="twitter:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
-            <meta property="twitter:description" content="Este es mi Blog personal (ArmandoCode), donde podrás encontrar posts muy interesantes si eres desarrollador de software 👨‍💻" />
+            <meta name="twitter:image" content="/img/Logo_portada.png" />
+            <meta name="twitter:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
+            <meta name="twitter:description" content="Este es mi Blog personal (ArmandoCode), donde podrás encontrar posts muy interesantes si eres desarrollador de software 👨‍💻" />
         </Head>
 
         <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="u-center">
