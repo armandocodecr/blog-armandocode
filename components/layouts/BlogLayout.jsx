@@ -3,7 +3,12 @@ import { Footer, Navbar } from "../ui";
 
 
 
-export const BlogLayout = ({ title, pageDescription, posts, children }) => {
+export const BlogLayout = ({ title, pageDescription, posts, slug, children }) => {
+
+  const concatImgURL = slug 
+    ? `/img/posts/${slug}/portada.png` 
+    : "https://res.cloudinary.com/dyuj1zglt/image/upload/v1674407383/ahxonr3ssagn8qbllgkx.png"
+
   return (
     <>
         <Head>
@@ -14,7 +19,7 @@ export const BlogLayout = ({ title, pageDescription, posts, children }) => {
             <meta name="title" property="og:title" content={ title } />
             <meta name="url" property="og:url" content="https://armando-murillo.vercel.app/" />
             <meta name="type" property="og:type" content="website" />
-            <meta name="image" property="og:image" content="https://res.cloudinary.com/dyuj1zglt/image/upload/v1674407383/ahxonr3ssagn8qbllgkx.png" />
+            <meta name="image" property="og:image" content={concatImgURL} />
             <meta property="og:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
 
             <meta name="twitter:site" content="@CodeArmando" />
@@ -23,7 +28,7 @@ export const BlogLayout = ({ title, pageDescription, posts, children }) => {
             <meta name="twitter:domain" content="armando-murillo.vercel.app" />
             <meta name="twitter:title" content={ title } />
             <meta property="twitter:url" content="https://armando-murillo.vercel.app/" />
-            <meta name="twitter:image" content="https://res.cloudinary.com/dyuj1zglt/image/upload/v1674407383/ahxonr3ssagn8qbllgkx.png" />
+            <meta name="twitter:image" content={concatImgURL} />
             <meta name="twitter:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
             <meta name="twitter:description" content={ pageDescription } />
         </Head>

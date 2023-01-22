@@ -21,7 +21,7 @@ const PostPage = ({ source, frontMatter }) => {
     const dateFormat = formatDate(date)
 
     return(
-        <BlogLayout title={title} pageDescription={`👨‍💻 - ${description}`}>
+        <BlogLayout title={title} pageDescription={`👨‍💻 - ${description}`} slug={asPath}>
             <section className="container-post-byslug">
                 <div className="container-content-post">
                     <div className="container-postTitle container-postTitle-byslug">
