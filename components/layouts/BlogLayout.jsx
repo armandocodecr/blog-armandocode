@@ -11,7 +11,6 @@ export const BlogLayout = ({ title, pageDescription, posts, children }) => {
             <meta name="decription" content={ pageDescription } />
 
             <meta name="og:title" content={ title } />
-            <meta name="og:image" content="/img/portada.png" />
         </Head>
 
         <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="u-center">
