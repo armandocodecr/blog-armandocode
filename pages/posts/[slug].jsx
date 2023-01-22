@@ -15,13 +15,13 @@ const PostPage = ({ source, frontMatter }) => {
     const { asPath } = useRouter();
     const slug = asPath.slice(7, asPath.length);
 
-    const { title, date, imgTitle } = frontMatter;
+    const { title, date, imgTitle, description } = frontMatter;
     const rutaImg = `/img/posts/${imgTitle}`;
 
     const dateFormat = formatDate(date)
 
     return(
-        <BlogLayout title={title}>
+        <BlogLayout title={title} pageDescription={`👨‍💻 - ${description}`}>
             <section className="container-post-byslug">
                 <div className="container-content-post">
                     <div className="container-postTitle container-postTitle-byslug">

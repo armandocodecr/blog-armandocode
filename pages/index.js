@@ -8,7 +8,7 @@ export default function Home({ posts }) {
 
   return (
     <>
-      <BlogLayout title='Blog - ArmandoCode 👨‍💻' pageDescription='Mi blog persona para mi Portfolio' posts={posts}>
+      <BlogLayout title='Blog - ArmandoCode 👨‍💻' pageDescription='ArmandoCode 👨‍💻 - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe.' posts={posts}>
           < HomePage posts={posts} />
       </BlogLayout>
     </>
