@@ -1,0 +1,76 @@
+---
+title: 'Cómo funciona el evento Bubbling en JavaScript'
+date: '2023-01-22'
+imgTitle: 'javascript.png'
+description: 'Conocer cómo funcionan y trabajan los eventos dentro del DOM es sumamente importante. Por lo que, conocer sobre este evento te ayudará en ese proceso.⚡'
+readingTime: '2:30 min'
+---
+
+Conocer cómo funcionan y trabajan los eventos dentro del DOM es sumamente importante. Por lo que, conocer sobre este evento te ayudará en ese proceso.
+Antes de comenzar a hablar sobre este evento es importante primero definir "**¿Qué es un evento?**"
+
+Los eventos son la manera que tenemos de capturar cierto tipo de comportamiento de los usuarios dentro de nuestra aplicación. Un ejemplo de este sería
+cuando un usuario da `click` en un botón.
+
+La forma que tenemos de capturar estos eventos es por medios de los `listeners`. De la siguiente manera. 👇
+
+```js
+element.addEventListener(event, () => {})
+```
+
+Donde por ejemplo, si queremos capturar algún evento, debemos indicar el tipo de este. Como lo haremos en el siguiente ejemplo en el cuál
+queremos hacer uso del evento `click`.
+
+```js
+const element = document.getElementById('mi_boton')
+element.addEventListener('click', () => {
+  console.log('element click!')
+})
+```
+
+Dicho esto, **Bubbling** es un tipo de propagación de los eventos del **DOM** que empieza desde el elemento que lo activa, hasta lo más profundo de los elementos padres de este. 
+Existen tres fases que ocurren para llegar al evento Bubbling. 👇
+
+1. Capturing.
+2. Target.
+3. Bubbling.
+
+Veámoslo en un diagrama para que se pueda entender mejor. 👨‍🏫
+
+![ejemplo_bubbling](/img/posts/como_funciona_el_evento_bubbling_en_JavaScript/estructura.png)
+
+Como vemos, el **Capturing** es básicamente lo contrario al **Bubbling**, él primero captura todos los elementos padres hasta llegar al elemento que produce el evento. 
+Luego del **target**, el evento **Bubbling** se propaga entre todos los elementos padres hasta llegar a lo más profundo de este.
+
+Es de tener en cuenta que, en casos específicos hay que tener cuidado con el evento **Bubbling**, ya que en ocasiones si tenemos múltiples eventos anidados
+en varios elementos padres, esto puede causar problemas al hacer que todos automáticamente se ejecuten, ya que eso es lo que produce este evento **Bubbling** al propagarse
+con elemetos más arriba de él según la jerarquía en la estructura de la página.
+
+Miremos este caso. 👀👇
+
+```html
+<div id="container">
+  <button id="button_1">
+    Button 1
+    <button id="button_2">Button 2</button>
+  </button>
+</div>
+```
+
+```js
+document.getElementById('mi_boton_1').addEventListener('click', () => console.log('boton 1 clicado!'))
+document.getElementById('mi_boton_2').addEventListener('click', () => console.log('boton 2 clicado!'))
+document.getElementById('mi_div').addEventListener('click', () => console.log('div clicado!'))
+```
+
+Entendiendo cómo funciona **Bubbling**, qué conclusiones podemos sacar de lo que pasaría en la estructura anterior si presionamos el **Button 2**?
+Pues lo que pasaría es que, se produciría un evento en el **Button 2**, luego otro en el **Button 1**, y por último otro en el **div**.
+
+Y digamos ahora que, tenemos un caso en específico donde necesitamos que esta propagación que ocasiona el evento **Bubbling* no se produzca. ¿Cómo lo haríamos?
+
+De la siguiente manera, con el método `.stopPropagation()`. 👇
+
+![evita_el_evento_bubbling](/img/posts/como_funciona_el_evento_bubbling_en_JavaScript/code.png)
+
+**Nota:** El evento Bubbling no se produce en todos los **tipos** de eventos en el **DOM**. Hay casos como el evento `blur`, o el evento `focus` en JavaScript 
+donde este no se da.

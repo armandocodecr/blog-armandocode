@@ -3,6 +3,7 @@ title: 'No cometas estos errores en tu código de JavaScript'
 date: '2023-01-20'
 imgTitle: 'javascript.png'
 description: 'Existen ciertos errores que no debemos cometer si estamos aprendiendo a programar en JavaScript. Aquí te las enseño.✍'
+readingTime: '3:00 min'
 ---
 
 Existen ciertos errores que no debemos cometer si estamos aprendiendo a programar en **JavaScript**.
@@ -28,6 +29,7 @@ Como se muestra en el siguiente caso. 👇
 ```js
 const num1 = 10;
 const num2 = 5;
+
 const validacionEntreNumeros = ( num1, num2 ) => {
     if( num1 > num2 ){
         return true;
@@ -43,6 +45,7 @@ O el mismo caso, pero usando ternarias.
 ```js
 const num1 = 10;
 const num2 = 5;
+
 const validacionEntreNumeros = ( num1, num2 ) => {
     return num1 > num2 
     ? true 
@@ -56,6 +59,7 @@ Por lo que, en un caso como este, es recomendable devolver directamente la condi
 ```js
 const num1 = 10;
 const num2 = 5;
+
 const validacionEntreNumeros = ( num1, num2 ) => {
     return num1 > num2;
 }
@@ -88,6 +92,7 @@ const personas = [
     { name: 'Jack', age: 17 },
     { name: 'Jonathan', age: 15 }
 ]
+
 Boolean(personas.filter(persona => {
     return persona.age >= 18;
 })[0])
@@ -107,7 +112,9 @@ const personas = [
     { name: 'Jack', age: 17 },
     { name: 'Jonathan', age: 15 }
 ]
+
 let found = false;
+
 personas.forEach(persona => {
     if( !found ) {
         found = persona.age >= 18;
@@ -128,6 +135,7 @@ const personas = [
     { name: 'Jack', age: 17 },
     { name: 'Jonathan', age: 15 }
 ]
+
 personas.some((persona) => {
     return persona.age >= 18;
 })
@@ -144,8 +152,10 @@ Un ejemplo de este probleba es el siguiente:
 ```js
 var valor = 1;
 console.log(valor) // 1
+
 var valor = 'Armando'
 console.log(valor); //Armando
+
 var valor = true;
 console.log(valor); // true
 ```
@@ -156,9 +166,11 @@ Otro caso un poco más claro es el siguiente:
 
 ```js
 var name = 'Armando'
+
 if (name === 'Armando') {
   var name = 'Guillermo'
 }
+
 console.log(name) // 'Guillermo'
 ```
 
@@ -166,9 +178,11 @@ console.log(name) // 'Guillermo'
 
 ```js
 const name = 'Armando'
+
 if (name === 'Armando') {
   let name = 'Guillermo'
 }
+
 console.log(Armando) // 'Armando'
 ```
 

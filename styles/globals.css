@@ -194,7 +194,7 @@ ul{
 .container-arrows{
   display: flex;
   gap: 15px;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-left: 20px;
 }
 
@@ -328,6 +328,12 @@ ul{
   font-size: 1.125rem;
   line-height: 1.7em;
   color: white;
+}
+
+#content-post li{
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: var(--a-color);
 }
 
 .container-title-card a{
