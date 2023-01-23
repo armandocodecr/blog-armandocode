@@ -245,6 +245,7 @@ ul{
 
 .container-title-card{
   width: 60%;
+  min-width: 300px;
   padding-left: 20px;
 }
 
