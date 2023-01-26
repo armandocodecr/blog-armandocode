@@ -1,76 +1,46 @@
-import { useState, useEffect } from "react"
-
 import { Podcast, PostInstagram, Youtube } from "../frames"
 import { PostsLists } from "../posts"
 
+import { usePagination } from "@/hooks"
+
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
+import { ButtonsPagination } from "./buttons/ButtonsPagination"
 
 export const HomePage = ( {posts} ) => {
 
-    const [prevPage, setPrevPage] = useState(0)
-    const [nextPage, setNextPage] = useState(3)
-    const [arrayPages, setArrayPages] = useState(posts)
-
-    useEffect(() => {
-      
-        setArrayPages(posts.filter((post, i) => {
-            if( i <= nextPage && i >= prevPage ) return post;
-        }))
-
-    }, [nextPage, prevPage, posts])
-    
-    const changePage = (next) => {
-        if( next ) {
-            setNextPage(state => state + 4)
-            setPrevPage(state => state + 4)
-            return;
-        }
-
-        setNextPage(state => state - 4)
-        setPrevPage(state => state - 4)
-    }
+    const { changePage, arrayPages, prevPage, nextPage } = usePagination({posts})
 
     return (
         <section className="container-content u-center">
             <div className="container-posts">
                 <h1>Ultimos posts</h1>
-                < PostsLists posts={arrayPages} />
-                <div className="container-arrows">
-                    {
-                        prevPage !== 0 && (
-                            <button onClick={() => changePage(false)}>
-                                <FaArrowLeft className="btn-arrow"/>
-                            </button>
-                        )
-                    }
-                    {
-                        nextPage < posts.length - 1 && (
-                            <button onClick={() => changePage(true)}>
-                                <FaArrowRight className="btn-arrow"/>
-                            </button>
-                        )
-                    }
-                </div>
+                <section className="container-postList">
+                    < PostsLists posts={arrayPages} />
+                </section>
 
+                <ButtonsPagination 
+                    nextPage={nextPage} 
+                    prevPage={prevPage} 
+                    changePage={changePage} 
+                    postsLength={posts.length} 
+                />
+
+                </div>
                 <div className="container-posts-social">
+                    <h1>Último video en Youtube</h1>
+                    <div className="posts-youtube">
+                        < Youtube 
+                            urlVideo={'https://www.youtube.com/watch?v=bA6T8KOgAFg'}
+                            urlImage={'https://res.cloudinary.com/dyuj1zglt/image/upload/v1674766529/miniaturas/wg8lwf9mospmukj5fgdu.png'} 
+                            description='Closures en JAVASCRIPT: Qué son, y cómo se usan. 👨‍💻'
+                        />
+                    </div>
                     <h1>Podcast recomendados</h1>
-                    <div className="posts-podcast posts">
+                    <div className="posts-podcast">
                         < Podcast episode={'3oosd3Y7oM3DAsXusY7rai'} />
                         < Podcast episode={'5fd78Wp41IhaoKWVKBoS3C'} />
                     </div>
-                    <h1>Último video en Youtube</h1>
-                    <div className="posts-youtube posts">
-                        < Youtube id={'vA-x0NugUQ4'} />
-                    </div>
                 </div>
-                </div>
-                <div className="container-instagram">
-                    <h1>Ultimos posts en Instagram</h1>
-                    <div className="posts-instagram">
-                        < PostInstagram id={'CnQXVh-rFf3'} />
-                        < PostInstagram id={'Cm7cKW8vhPB'} />
-                </div>
-            </div>
         </section>
     )
 }
