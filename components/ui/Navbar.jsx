@@ -51,10 +51,18 @@ export const Navbar = ({ posts }) => {
             <ul style={{ display: 'flex', gap: '20px'}}>
                 <input type="text" placeholder="Buscar..." className="input-navbar" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                 <div className="container-navbar-icons">
-                    <FaGithub className="navbar-icons" id="git"/>
-                    <FaInstagram className="navbar-icons" id="instagram"/>
-                    <FaTwitter className="navbar-icons" id="twitter"/>
-                    <FaLinkedin className="navbar-icons" id="linkedin"/>
+                    <a href="https://github.com/Armandocm19" target="_blank" rel="noreferrer">
+                        <FaGithub className="navbar-icons" id="git"/>
+                    </a>
+                    <a href="https://www.instagram.com/armandocodecr/" target="_blank" rel="noreferrer">
+                        <FaInstagram className="navbar-icons" id="instagram"/>
+                    </a>
+                    <a href="https://twitter.com/CodeArmando" target="_blank" rel="noreferrer">
+                        <FaTwitter className="navbar-icons" id="twitter"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/armandocode/" target="_blank" rel="noreferrer">
+                        <FaLinkedin className="navbar-icons" id="linkedin"/>
+                    </a>
                 </div>
                 <div className={`menu-search ${ hideSearchMenu }`}>
                     {
