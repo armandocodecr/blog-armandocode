@@ -1,16 +1,12 @@
 
 
-export const Youtube = ({ id }) => {
+export const Youtube = ({ description, urlImage, urlVideo }) => {
     return (
-        <iframe 
-            style={{ borderRadius: '12px' }}
-            width="50%" 
-            height="250px" 
-            src={`https://www.youtube.com/embed/${id}`}
-            title="YouTube video player" 
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowFullScreen
-        ></iframe>
+        <a href={urlVideo} target="_blank" rel="noreferrer">
+            <picture>
+                <img src={urlImage} alt="miniatura del video de youtube" />
+            </picture>
+            <h4>{description}</h4>
+        </a>
     )
 }
