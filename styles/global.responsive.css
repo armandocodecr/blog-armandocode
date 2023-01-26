@@ -1,6 +1,6 @@
 
 
-@media screen and ( max-width: 1150px ) {
+@media screen and ( max-width: 1025px ) {
 
     /* Componente HomePage */
 
@@ -8,14 +8,12 @@
         flex-direction: column;
     }
 
-    .container-instagram iframe{
-        width: 45vh;
-        height: 45vh;
+    .container-posts-social{
+        width: 100%;
     }
 
-    .posts-instagram{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+    .container-posts{
+        padding: 20px;
     }
 
 }
@@ -127,11 +125,31 @@
 
     /* Componente HomePage */
 
+    .container-content{
+        gap: 20px;
+    }
+
+    .container-postList{
+        gap: 50px;
+    }
+
+    .container-posts{
+        padding: 10px;
+    }
+
+    .container-posts-social{
+        padding:0;
+    }
+
     .article-container-post h2{
         min-width: 200px;
     }
 
     /* Componente PostCard */
+
+    .article-container-post{
+        margin: 0px;
+    }
 
     .container-title-card h2{
         font-size: 15px;

@@ -159,29 +159,52 @@ ul{
   padding: 0 10px;
 }
 
-.container-posts h1, .container-instagram h1{
-  color: #1da0f2;
-  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.459);
-}
-
-.posts-instagram{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-.container-instagram{
+.container-posts-social{
+  width: 60%;
+  display: flex;
   padding: 0 10px;
+  flex-direction: column;
 }
 
-.container-instagram iframe{
-  width: 35vh;
-  height: 40vh;
+.posts-podcast{
+  display: flex;
+  flex-direction: column;
+}
+
+.posts-podcast iframe{
+  width: 100%;
+}
+
+.posts-youtube{
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.1s ease-in,
+  transform 0.1s ease-in;
+}
+
+.posts-youtube:hover{
+  background-color: #1da0f233;
+}
+
+.posts-youtube:active{
+  transform: scale(1.1); 
+}
+
+
+.posts-youtube picture img{
+  width: 100%;
   border-radius: 10px;
 }
 
-.posts-instagram iframe{
-  margin-top: 40px;
+.posts-youtube h4{
+  color: white;
+  margin: 0;
+}
+
+.container-posts h1, .container-posts-social h1{
+  color: #1da0f2;
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.459);
 }
 
 .posts{
@@ -216,8 +239,14 @@ ul{
 
 /* Componente PostCard */
 
+.container-postList{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .article-container-post{
-  padding: 20px;
   background-color: transparent;
   border-radius: 10px;
   margin-top: 20px;
