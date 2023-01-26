@@ -60,7 +60,7 @@ export const HomePage = ( {posts} ) => {
                     </div>
                     <h1>Último video en Youtube</h1>
                     <div className="posts-youtube posts">
-                        < Youtube id={'bA6T8KOgAFg&t'} />
+                        < Youtube id={'bA6T8KOgAFg'} />
                     </div>
                 </div>
                 </div>
