@@ -1,22 +1,21 @@
 import { useRouter } from "next/router";
-import Image from "next/image";
 
 import { MDXRemote } from "next-mdx-remote";
 
 import { getFileBySlug, getFiles } from "@/lib/mdx";
 import { BlogLayout } from "@/components/layouts";
-import { FaGithub } from "react-icons/fa";
 
 import "highlight.js/styles/atom-one-dark.css"
 import { formatDate } from "@/utils";
+import { PostTitle } from "@/components/posts";
 
 const PostPage = ({ source, frontMatter }) => {
 
     const { asPath } = useRouter();
     const slug = asPath.slice(7, asPath.length);
 
-    const { title, date, imgTitle, description } = frontMatter;
-    const rutaImg = `/img/posts/${imgTitle}`;
+    const { title, date, imgTitle, description, readingTime } = frontMatter;
+    const urlImg = `/img/posts/${imgTitle}`;
 
     const dateFormat = formatDate(date)
 
@@ -24,30 +23,8 @@ const PostPage = ({ source, frontMatter }) => {
         <BlogLayout title={title} pageDescription={`👨‍💻 - ${description}`} slug={asPath}>
             <section className="container-post-byslug">
                 <div className="container-content-post">
-                    <div className="container-postTitle container-postTitle-byslug">
-                        <Image src={rutaImg} width={75} height={75} alt="imagen del titulo" id="img-title" />
-                        <div className="container-title-card">
-                            <h1>{title}</h1>
-                            <p>
-                                <a 
-                                href="https://www.linkedin.com/in/armando-murillo/" 
-                                target='_blank' 
-                                rel="noreferrer">Armando Murillo
-                                </a> 
-                                | { dateFormat }
-                            </p>
-                        </div>
-                    </div>
-
-                    <div id="container-aditional-info">
-                        <p>
-                            < FaGithub style={{ color: 'white' }} /> 
-                            ¿Ves alguna errata o quiere sugerir algo? 
-                            <a href={`https://github.com/Armandocm19/blog-armandocode/blob/main/data/${slug}.mdx`} target='_blank' rel="noreferrer">
-                                Haz un pull request
-                            </a>
-                        </p>
-                    </div>
+                   
+                   <PostTitle urlImage={urlImg} title={title} date={dateFormat} readingTime={readingTime} slug={slug} />
 
                     <div style={{ position: 'relative', width: '100%' }} id="content-post">
                         <MDXRemote {...source} />

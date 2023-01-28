@@ -8,8 +8,15 @@ export const PostsLists = ({ posts }) => {
     return(
         <>
             {
-                postsSort.map(item => (
-                    < PostCard title={item.title} date={ item.date } slug={item.slug} img={item.imgTitle} key={item.slug} desc={item.description} />
+                postsSort.map(post => (
+                    < PostCard 
+                        title={post.title} 
+                        date={ post.date } 
+                        slug={post.slug} 
+                        img={post.imgTitle} 
+                        key={post.slug} 
+                        desc={post.description} 
+                    />
                 ))
             }
         </>
