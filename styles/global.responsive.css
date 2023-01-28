@@ -16,6 +16,11 @@
         padding: 20px;
     }
 
+    .container-info-autor img{
+        width: 150px;
+        height: 150px;
+    }
+
 }
 
 @media screen and ( max-width: 850px ) {
@@ -49,6 +54,16 @@
 
     nav .input-navbar{
         display: none;
+    }
+
+    /* Componente HomePage */
+
+    .info-autor{
+        width: 100%;
+    }
+
+    .container-info-autor p{
+        font-size: 15px;
     }
 
    /* Componente PostCard */
@@ -145,6 +160,20 @@
         min-width: 200px;
     }
 
+    .container-info-autor{
+        margin-top: 30px;
+    }
+
+    .container-info-autor h2{
+        display: inline;
+    }
+
+    .info-autor{
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+    }
+
     /* Componente PostCard */
 
     .article-container-post{
@@ -226,4 +255,28 @@
     footer h3{
         font-size: 10px;
     }
+}
+
+
+@media screen and ( max-width: 400px ) {
+
+    /* Componente HomePage */
+
+    .container-info-autor p{
+        font-size: 13px;
+    }
+
+    .container-info-autor img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .container-info-autor h2{
+        font-size: 25px;
+    }
+
+    .title-info-autor{
+        gap: 30px;
+      }
+
 }
