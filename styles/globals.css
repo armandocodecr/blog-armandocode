@@ -214,6 +214,10 @@ ul{
   margin: 0;
 }
 
+.posts-youtube a{
+  text-decoration: none;
+}
+
 .container-posts h1, .container-posts-social h1{
   color: #1da0f2;
 }

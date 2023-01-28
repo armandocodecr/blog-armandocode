@@ -11,7 +11,7 @@ export const About = () => {
                     <picture>
                         <img src="/img/foto.png" alt="Aqui muestro una imagen de mi persona" />
                     </picture>
-                    <h2>Armando Code</h2>
+                    <h2>ArmandoCode</h2>
                 </div>
                 <p>
                     Estudiante de Ing. Informática (2020 - 2023), Tengo más de 2 años especializandome en el área de 
