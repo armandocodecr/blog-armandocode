@@ -1,6 +1,6 @@
 
 
-@media screen and ( max-width: 1150px ) {
+@media screen and ( max-width: 1025px ) {
 
     /* Componente HomePage */
 
@@ -8,14 +8,17 @@
         flex-direction: column;
     }
 
-    .container-instagram iframe{
-        width: 45vh;
-        height: 45vh;
+    .container-posts-social{
+        width: 100%;
     }
 
-    .posts-instagram{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+    .container-posts{
+        padding: 20px;
+    }
+
+    .container-info-autor img{
+        width: 150px;
+        height: 150px;
     }
 
 }
@@ -51,6 +54,16 @@
 
     nav .input-navbar{
         display: none;
+    }
+
+    /* Componente HomePage */
+
+    .info-autor{
+        width: 100%;
+    }
+
+    .container-info-autor p{
+        font-size: 15px;
     }
 
    /* Componente PostCard */
@@ -127,11 +140,45 @@
 
     /* Componente HomePage */
 
+    .container-content{
+        gap: 20px;
+    }
+
+    .container-postList{
+        gap: 50px;
+    }
+
+    .container-posts{
+        padding: 10px;
+    }
+
+    .container-posts-social{
+        padding:0;
+    }
+
     .article-container-post h2{
         min-width: 200px;
     }
 
+    .container-info-autor{
+        margin-top: 30px;
+    }
+
+    .container-info-autor h2{
+        display: inline;
+    }
+
+    .info-autor{
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+    }
+
     /* Componente PostCard */
+
+    .article-container-post{
+        margin: 0px;
+    }
 
     .container-title-card h2{
         font-size: 15px;
@@ -208,4 +255,28 @@
     footer h3{
         font-size: 10px;
     }
+}
+
+
+@media screen and ( max-width: 400px ) {
+
+    /* Componente HomePage */
+
+    .container-info-autor p{
+        font-size: 13px;
+    }
+
+    .container-info-autor img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .container-info-autor h2{
+        font-size: 25px;
+    }
+
+    .title-info-autor{
+        gap: 30px;
+      }
+
 }

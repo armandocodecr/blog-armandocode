@@ -31,6 +31,21 @@ export const BlogLayout = ({ title, pageDescription, posts, slug, children }) =>
             <meta name="twitter:image" content={concatImgURL} />
             <meta name="twitter:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
             <meta name="twitter:description" content={ pageDescription } />
+
+            {/* FUENTES */}
+
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet"/>
+
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital@1&display=swap" rel="stylesheet" />
+
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet" />
+            
         </Head>
 
         <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="u-center">
