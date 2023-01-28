@@ -29,27 +29,6 @@ export const HomePage = ( {posts} ) => {
                     <About />
                 </section>
 
-<<<<<<< HEAD
-                <div className="container-posts-social">
-                    <h1>Podcast recomendados</h1>
-                    <div className="posts-podcast posts">
-                        < Podcast episode={'3oosd3Y7oM3DAsXusY7rai'} />
-                        < Podcast episode={'5fd78Wp41IhaoKWVKBoS3C'} />
-                    </div>
-                    <h1>Último video en Youtube</h1>
-                    <div className="posts-youtube posts">
-                        < Youtube id={'bA6T8KOgAFg'} />
-                    </div>
-                </div>
-                </div>
-                <div className="container-instagram">
-                    <h1>Ultimos posts en Instagram</h1>
-                    <div className="posts-instagram">
-                        < PostInstagram id={'CndfnWQrTKF'} />
-                        < PostInstagram id={'Cm7cKW8vhPB'} />
-                </div>
-=======
->>>>>>> rama-features
             </div>
 
             <section className="container-posts-social">
