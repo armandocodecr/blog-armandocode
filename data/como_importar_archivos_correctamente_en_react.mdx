@@ -1,0 +1,43 @@
+---
+title: 'Cómo exportar tus componentes correctamente en React'
+date: '2023-01-27'
+imgTitle: 'react.png'
+description: 'Exportar nuestros componentes en React es sumamente importante si quieres que tus importaciones sean ordenadas. Te lo muestro aquí.👨‍💻'
+readingTime: '1:30 min'
+---
+
+Dentro de nuestro código es importante ser ordenados, dentro de proyectos grandes es algo que vale oro. Y esto, claramente incluye la forma en la que exportamos
+nuestros `componentes`. Ya que, de lo contrario tendremos múltiples **imports** dentro de nuestro código que va hacer que sea muy confuso ubicar cada uno de ellos.
+
+**Nota:** *Esto es algo que no solo puedes usar para exportar `componentes`. También lo puedes utilizar para exportar múltiples archivos que se acumulen dentro de una carpeta.*
+
+Dicho esto, veámos cómo se vería la importacion de varios componentes que provienen de la misma carpeta, en otro `componente` que hará uso de estas.
+
+❌
+![imports_incorrectos](/img/posts/como_importar_archivos_correctamente_en_react/img1.png)
+
+Esto es un problema. 🤯
+
+¿Y por qué? 🤔
+
+Imaginate que tienes 8 `componentes`, que necesitas exportar dentro de una carpeta por alguna razón. Si dichos `compontenes`, tienes que importarlos en otro
+componente para usarlos. esto desencadenaría a tener 8 **imports** de la **MISMA CARPETA**.
+
+💡 ¿Cómo podemos arreglarlo?
+
+Tenemos que empezar por crear un archivo **index.js (o index.ts, en caso de usar TypeScript)**, dentro de la carpeta que contiene dichos `componentes` o archivos que deseamos exportar. 
+Luego, dentro de este archivo, vamos a exportar cada uno de estos.
+
+De esta manera. 👇
+
+![imports_incorrectos](/img/posts/como_importar_archivos_correctamente_en_react/img3.png)
+
+Luego de esto, podremos importar a estos mismos con un solo **import** en donde deseemos.
+
+Como se muestra a continuación. 👇
+
+✅
+![imports_incorrectos](/img/posts/como_importar_archivos_correctamente_en_react/img2.png)
+
+Aunque consume casi las mismas líneas de código, solo llegamos a ocupar de un solo **import**, y no de múltiples de estos.
+Por lo que, es más recomendable, más limpio, y más común hacer uso de esta ténica. 😉
