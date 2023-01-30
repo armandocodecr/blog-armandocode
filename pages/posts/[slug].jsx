@@ -2,14 +2,14 @@ import { useRouter } from "next/router";
 
 import { MDXRemote } from "next-mdx-remote";
 
-import { getFileBySlug, getFiles } from "@/lib/mdx";
+import { getFileBySlug, getFiles, getAllFileMetadata } from "@/lib/mdx";
 import { BlogLayout } from "@/components/layouts";
 
 import "highlight.js/styles/atom-one-dark.css"
 import { formatDate } from "@/utils";
 import { PostTitle } from "@/components/posts";
 
-const PostPage = ({ source, frontMatter }) => {
+const PostPage = ({ source, frontMatter, posts }) => {
 
     const { asPath } = useRouter();
     const slug = asPath.slice(7, asPath.length);
@@ -20,7 +20,7 @@ const PostPage = ({ source, frontMatter }) => {
     const dateFormat = formatDate(date)
 
     return(
-        <BlogLayout title={title} pageDescription={`👨‍💻 - ${description}`} slug={asPath}>
+        <BlogLayout title={title} pageDescription={`👨‍💻 - ${description}`} slug={asPath} posts={posts}>
             <section className="container-post-byslug">
                 <div className="container-content-post">
                    
@@ -39,9 +39,10 @@ const PostPage = ({ source, frontMatter }) => {
 export async function getStaticProps({ params }) {
 
     const { source, frontMatter } = await getFileBySlug(params.slug);
+    const posts = await getAllFileMetadata();
 
     return {
-      props: { source, frontMatter },
+      props: { source, frontMatter, posts },
     }
  }
 
