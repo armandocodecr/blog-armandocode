@@ -130,6 +130,7 @@ ul{
   padding: 5px;
   border-radius: 5px;
   background-color: #3c4654;
+  z-index: 1;
 }
 
 .menu-search.disabled{
@@ -363,6 +364,7 @@ ul{
   align-items: center;
   flex-direction: column;
   margin-top: 50px;
+  z-index: 0;
 }
 
 .container-content-post{

@@ -1,8 +1,6 @@
 import Head from "next/head"
 import { Footer, Navbar } from "../ui";
 
-
-
 export const BlogLayout = ({ title, pageDescription, posts, slug, children }) => {
 
   const concatImgURL = slug 

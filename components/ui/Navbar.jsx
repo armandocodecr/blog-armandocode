@@ -24,7 +24,6 @@ export const Navbar = ({ posts }) => {
             setPostSearched(posts.filter(post => {
                 let search = searchQuery.toLowerCase()
                 let titlePost = post.title.toLowerCase()
-                // console.log(typeof(post.title))
                if( titlePost.includes(search) ){
                 return post
                }
@@ -33,8 +32,7 @@ export const Navbar = ({ posts }) => {
             setHideSearchMenu('disabled')
         }
         
-    }, [searchQuery, posts])
-    
+    }, [searchQuery])
 
     return (
         <>
@@ -66,8 +64,8 @@ export const Navbar = ({ posts }) => {
                 </div>
                 <div className={`menu-search ${ hideSearchMenu }`}>
                     {
-                        postSeached && (
-                            postSeached.map(({ title, date, post, imgTitle, slug }) =>(
+                        postSeached.length !== 0 ? (
+                            postSeached.map(({ title, date, imgTitle, slug }) =>( 
                                 <Link href={`/posts/${ slug }`} key={ slug } style={{ textDecoration: 'none' }}>
                                     <article className="container-postTitle search-container-post">
                                         <Image src={concatUrlImage( imgTitle )} alt="imagen del titulo" width={20} height={20}/>
@@ -78,6 +76,11 @@ export const Navbar = ({ posts }) => {
                                     </article>
                                 </Link>
                             ))
+                        )
+                        : (
+                            <article className="container-postTitle search-container-post">
+                            <p>{`No hay resultados sobre: "${searchQuery}"  `}</p>
+                            </article>
                         )
                     }
                 </div>
