@@ -1,0 +1,208 @@
+---
+title: 'Qué son las promesas en JavaScript, y cómo se utilizan'
+date: '2023-01-29'
+imgTitle: 'javascript.png'
+description: 'Las promesas son objetos sumamente utilizados por distintas razones, y saber cómo se utilizan es vital. Conoce más a detalle sobre estas en este post. 👀' 
+readingTime: '4:00 min'
+---
+
+Las promesas en JavaScript son objetos que representan el resultado de una operación asíncrona. Una promesa puede estar en uno de tres estados: pendiente, resuelta o rechazada. Las promesas permiten manejar de manera más clara y organizada la lógica de nuestro código cuando trabajamos con operaciones asíncronas.
+
+Cuándo usar promesas:
+
+1. Al realizar llamados a una API externa
+2. Al leer o escribir en archivos
+3. Al realizar operaciones de base de datos
+
+
+Ejemplo de una promesa en JavaScript: 👇
+
+```js
+const fetchData = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Data fetched');
+    }, 1000);
+  });
+};
+
+fetchData()
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+```
+
+En este ejemplo, creamos una función **fetchData** que devuelve una promesa. La promesa se resuelve después de 1 segundo con el mensaje **"Data fetched"**. 
+Luego, usamos el método `then` para manejar el caso exitoso y el método `catch` para manejar errores. 👨‍💻
+
+Los objetos Promise en JavaScript tienen los siguientes métodos:
+
+1. `then`: Este método recibe dos callbacks como argumentos, uno que se ejecutará si la promesa se resuelve correctamente, y otro que se ejecutará si la promesa es rechazada.
+
+```js
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('La promesa se ha resuelto');
+  }, 1000);
+});
+
+promise
+  .then(result => {
+    console.log(result); // 'La promesa se ha resuelto'
+  })
+  .catch(error => {
+    console.error(error);
+  });
+```
+
+2. `catch`: Este método recibe un callback como argumento que se ejecutará si la promesa es rechazada. Es equivalente a llamar a `then`(null, callback).
+
+```js
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(new Error('La promesa ha fallado'));
+  }, 1000);
+});
+
+promise
+  .then(result => {
+    console.log(result);
+  })
+  .catch(error => {
+    console.error(error.message); // 'La promesa ha fallado'
+  });
+```
+
+3. `finally`: Este método recibe un callback como argumento que se ejecutará independientemente de si la promesa se resuelve o se rechaza.
+
+```js
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('La promesa se ha resuelto');
+  }, 1000);
+});
+
+promise
+  .then(result => {
+    console.log(result); // 'La promesa se ha resuelto'
+  })
+  .catch(error => {
+    console.error(error);
+  })
+  .finally(() => {
+    console.log('Se ha ejecutado el bloque finally');
+  });
+```
+
+4. `race`: Este método recibe un array de promesas, y devuelve una nueva promesa que se resolverá cuando la primera promesa del array sea resuelta o rechazada.
+
+```js
+const promise1 = new Promise(resolve => {
+  setTimeout(() => {
+    resolve('La promesa 1 se ha resuelto');
+  }, 1000);
+});
+
+const promise2 = new Promise(resolve => {
+  setTimeout(() => {
+    resolve('La promesa 2 se ha resuelto');
+  }, 2000);
+});
+
+Promise.race([promise1, promise2])
+  .then(result => {
+    console.log(result); // 'La promesa 1 se ha resuelto'
+  })
+  .catch(error => {
+    console.error(error);
+  });
+```
+
+5. `resolve`: Este método permite crear una promesa resuelta con un valor determinado.
+
+```js
+const promise = Promise.resolve('La promesa se ha resuelto');
+```
+
+6. `reject`: Este método permite crear una promesa rechazada con una razón determinada.
+
+```js
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(new Error('La promesa ha fallado'));
+  }, 1000);
+});
+
+promise.then(result => {
+  console.log(result);
+})
+.catch(error => {
+  console.error(error);
+  /*
+  Error: La promesa ha fallado
+  */
+});
+```
+En este ejemplo, creamos una promesa que se rechazará después de 1 segundo con un mensaje de error. La promesa se rechaza, y la función `catch` es invocada para manejar el error.
+
+7. `all`: Este método recibe un array de promesas, y devuelve una nueva promesa que se resolverá cuando todas las promesas del array hayan sido resueltas.
+
+```js
+const promise1 = new Promise(resolve => {
+  setTimeout(() => {
+    resolve('La promesa 1 se ha resuelto');
+  }, 1000);
+});
+
+const promise2 = new Promise(resolve => {
+  setTimeout(() => {
+    resolve('La promesa 2 se ha resuelto');
+  }, 2000);
+});
+
+Promise.all([promise1, promise2])
+  .then(results => {
+    console.log(results); // ['La promesa 1 se ha resuelto', 'La promesa 2 se ha resuelto']
+  })
+  .catch(error => {
+    console.error(error);
+  });
+```
+
+8. `allSetlled`: El método allSettled es un método estático que permite esperar a que todas las promesas se resuelvan o fallen antes de continuar con el siguiente paso. 
+A diferencia de `Promise.all`, este devuelve una sola promesa que se resuelve cuando todas las promesas han sido resueltas. 
+`allSettled` devuelve una promesa que se resuelve con un array de objetos que describen el estado de cada una de las promesas.
+
+```js
+const promise1 = new Promise(resolve => {
+  setTimeout(() => {
+    resolve({ status: 'fulfilled', value: 'La promesa 1 se ha resuelto' });
+  }, 1000);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(new Error('La promesa 2 ha fallado'));
+  }, 2000);
+});
+
+Promise.allSettled([promise1, promise2])
+  .then(results => {
+    console.log(results);
+    /*
+    [
+      { status: 'fulfilled', value: 'La promesa 1 se ha resuelto' },
+      { status: 'rejected', reason: Error: La promesa 2 ha fallado }
+    ]
+    */
+  })
+  .catch(error => {
+    console.error(error);
+  });
+```
+
+En este ejemplo, promise1 se resuelve correctamente y promise2 falla. 
+El método `allSettled` espera a que ambas promesas se resuelvan o fallen antes de resolverse con un array que describe el estado de cada una de las promesas.
