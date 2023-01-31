@@ -8,8 +8,8 @@ export const Social = () => {
             <h1>Último video en Youtube</h1>
             <div className="posts-youtube">
                 < Youtube 
-                    urlVideo={'https://www.youtube.com/watch?v=bA6T8KOgAFg'}
-                    urlImage={'https://res.cloudinary.com/dyuj1zglt/image/upload/v1674766529/miniaturas/wg8lwf9mospmukj5fgdu.png'} 
+                    urlVideo={'https://www.youtube.com/watch?v=qfp0RGkZo4A'}
+                    urlImage={'https://res.cloudinary.com/dyuj1zglt/image/upload/v1675129054/miniaturas/ldod2fp3s7w1bwwue6xw.png'} 
                     description='Closures en JAVASCRIPT: Qué son, y cómo se usan. 👨‍💻'
                 />
             </div>
