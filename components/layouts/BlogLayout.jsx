@@ -4,7 +4,7 @@ import { Footer, Navbar } from "../ui";
 export const BlogLayout = ({ title, pageDescription, posts, slug, children }) => {
 
   const concatImgURL = slug 
-    ? `../../public/img/posts/${slug}/portada.png` 
+    ? `@/public/img/posts/${slug}/portada.png` 
     : "https://res.cloudinary.com/dyuj1zglt/image/upload/v1674407383/ahxonr3ssagn8qbllgkx.png"
 
   return (
