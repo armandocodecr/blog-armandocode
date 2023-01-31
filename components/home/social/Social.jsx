@@ -10,7 +10,7 @@ export const Social = () => {
                 < Youtube 
                     urlVideo={'https://www.youtube.com/watch?v=qfp0RGkZo4A'}
                     urlImage={'https://res.cloudinary.com/dyuj1zglt/image/upload/v1675129054/miniaturas/ldod2fp3s7w1bwwue6xw.png'} 
-                    description='Closures en JAVASCRIPT: Qué son, y cómo se usan. 👨‍💻'
+                    description='NO HAGAS ESTO, MEJOR HAS ESTO! | Versión SHORTCUTS DE VISUAL STUDIO CODE. 👨‍💻'
                 />
             </div>
             <h1>Podcast recomendados</h1>
