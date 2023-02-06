@@ -10,7 +10,7 @@ export const Social = () => {
                 < Youtube 
                     urlVideo={'https://www.youtube.com/watch?v=2XpAS3Ne78Q'}
                     urlImage={'https://res.cloudinary.com/dyuj1zglt/image/upload/v1675715963/miniaturas/ldpuyxahpjcqoua2ppkz.jpg'} 
-                    description='NO HAGAS ESTO, MEJOR HAS ESTO! | Versión SHORTCUTS DE VISUAL STUDIO CODE. 👨‍💻'
+                    description='LIBRERÍA vs. FRAMEWORK | DEFINICIÓN - DIFERENCIAS 👨‍💻'
                 />
             </div>
             <h1>Podcast recomendados</h1>
