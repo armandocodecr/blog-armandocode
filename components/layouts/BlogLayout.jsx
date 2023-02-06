@@ -4,7 +4,7 @@ import { Footer, Navbar } from "../ui";
 export const BlogLayout = ({ title, pageDescription, posts, slug, children }) => {
 
   const concatImgURL = slug 
-    ? `@/public/img${slug}/portada.png` 
+    ? `/public/img${slug}/portada.png` 
     : "https://res.cloudinary.com/dyuj1zglt/image/upload/v1674407383/ahxonr3ssagn8qbllgkx.png"
 
   return (
@@ -14,18 +14,25 @@ export const BlogLayout = ({ title, pageDescription, posts, slug, children }) =>
             <meta name="robots" content="index,follow"/>
             <meta name="decription" property="og:description" content={ pageDescription } />
 
-            <meta name="title" property="og:title" content={ title } />
-            <meta name="url" property="og:url" content="https://armando-murillo.vercel.app/" />
-            <meta name="type" property="og:type" content="website" />
-            <meta name="image" property="og:image" content={concatImgURL} />
-            <meta property="og:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
+            {/* Google / Search Engine Tags  */}
+            <meta itemprop="name" content="Blog - ArmandoCode 👨‍💻" />
+            <meta itemprop="description" content="ArmandoCode 👨‍💻 - Soy un desarrollador de Software, y aqui te compartiré información que te encantará sobre programación." />
+            <meta itemprop="image" content={concatImgURL} />
 
-            <meta name="twitter:site" content="@CodeArmando" />
-            <meta name="twitter:creator" content="@CodeArmando" />
-            <meta name="twitter:card" content="summary" />
+            {/* Facebook Meta Tags */}
+            <meta property="og:title" content={ title } />
+            <meta property="og:url" content="https://armando-murillo.vercel.app/" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content={concatImgURL} />
+            <meta property="og:image:alt" content="Imagen del blog" />
+
+            {/* Twitter Meta Tags */}
+            <meta name="twitter:site" content="@Armando_Code" />
+            <meta name="twitter:creator" content="@Armando_Code" />
+            <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:domain" content="armando-murillo.vercel.app" />
             <meta name="twitter:title" content={ title } />
-            <meta property="twitter:url" content="https://armando-murillo.vercel.app/" />
+            <meta name="twitter:url" content="https://armando-murillo.vercel.app/" />
             <meta name="twitter:image" content={concatImgURL} />
             <meta name="twitter:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
             <meta name="twitter:description" content={ pageDescription } />
@@ -34,15 +41,15 @@ export const BlogLayout = ({ title, pageDescription, posts, slug, children }) =>
 
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-            <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"/>
 
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-            <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital@1&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital@1&display=swap"/>
 
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-            <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap"/>
             
         </Head>
 
