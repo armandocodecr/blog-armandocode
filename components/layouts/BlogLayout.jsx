@@ -4,7 +4,7 @@ import { Footer, Navbar } from "../ui";
 export const BlogLayout = ({ title, pageDescription, posts, slug, children }) => {
 
   const concatImgURL = slug 
-    ? `https://blog-armandocode.vercel.app/posts/que_son_las_promesas_en_javascript//public/img/${slug}/portada.png` 
+    ? `@/public/img${slug}/portada.png` 
     : "https://res.cloudinary.com/dyuj1zglt/image/upload/v1674407383/ahxonr3ssagn8qbllgkx.png"
 
   return (
