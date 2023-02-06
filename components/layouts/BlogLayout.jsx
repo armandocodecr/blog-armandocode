@@ -15,9 +15,9 @@ export const BlogLayout = ({ title, pageDescription, posts, slug, children }) =>
             <meta name="decription" property="og:description" content={ pageDescription } />
 
             {/* Google / Search Engine Tags  */}
-            <meta itemprop="name" content="Blog - ArmandoCode 👨‍💻" />
-            <meta itemprop="description" content="ArmandoCode 👨‍💻 - Soy un desarrollador de Software, y aqui te compartiré información que te encantará sobre programación." />
-            <meta itemprop="image" content={concatImgURL} />
+            <meta itemProp="name" content="Blog - ArmandoCode 👨‍💻" />
+            <meta itemProp="description" content="ArmandoCode 👨‍💻 - Soy un desarrollador de Software, y aqui te compartiré información que te encantará sobre programación." />
+            <meta itemProp="image" content={concatImgURL} />
 
             {/* Facebook Meta Tags */}
             <meta property="og:title" content={ title } />
@@ -36,20 +36,6 @@ export const BlogLayout = ({ title, pageDescription, posts, slug, children }) =>
             <meta name="twitter:image" content={concatImgURL} />
             <meta name="twitter:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
             <meta name="twitter:description" content={ pageDescription } />
-
-            {/* FUENTES */}
-
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-            <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"/>
-
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-            <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital@1&display=swap"/>
-
-            <link rel="preconnect" href="https://fonts.googleapis.com" />
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-            <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap"/>
             
         </Head>
 
