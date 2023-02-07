@@ -458,6 +458,11 @@ code.hljs{
   border-radius: 5px;
 }
 
+#content-post ol {
+  padding-left: 20px;
+  font-weight: bold;
+}
+
 /* Componente Footer */
 
 footer{
