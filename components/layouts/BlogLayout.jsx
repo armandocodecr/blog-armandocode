@@ -1,11 +1,11 @@
 import Head from "next/head"
 import { Footer, Navbar } from "../ui";
 
-export const BlogLayout = ({ title, pageDescription, posts, slug, children }) => {
+export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, children }) => {
 
-  const concatImgURL = slug 
-    ? `/public/img${slug}/portada.png` 
-    : "https://res.cloudinary.com/dyuj1zglt/image/upload/v1674407383/ahxonr3ssagn8qbllgkx.png"
+  const getUrlImageFrontPage = urlImageFrontPage 
+    ? urlImageFrontPage 
+    : 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1675369455/dgdytbnah1tsm6jsa9yt.png'
 
   return (
     <>
@@ -17,13 +17,13 @@ export const BlogLayout = ({ title, pageDescription, posts, slug, children }) =>
             {/* Google / Search Engine Tags  */}
             <meta itemProp="name" content="Blog - ArmandoCode 👨‍💻" />
             <meta itemProp="description" content="ArmandoCode 👨‍💻 - Soy un desarrollador de Software, y aqui te compartiré información que te encantará sobre programación." />
-            <meta itemProp="image" content={concatImgURL} />
+            <meta itemProp="image" content={getUrlImageFrontPage} />
 
             {/* Facebook Meta Tags */}
             <meta property="og:title" content={ title } />
             <meta property="og:url" content="https://armando-murillo.vercel.app/" />
             <meta property="og:type" content="website" />
-            <meta property="og:image" content={concatImgURL} />
+            <meta property="og:image" content={getUrlImageFrontPage} />
             <meta property="og:image:alt" content="Imagen del blog" />
 
             {/* Twitter Meta Tags */}
@@ -33,7 +33,7 @@ export const BlogLayout = ({ title, pageDescription, posts, slug, children }) =>
             <meta name="twitter:domain" content="armando-murillo.vercel.app" />
             <meta name="twitter:title" content={ title } />
             <meta name="twitter:url" content="https://armando-murillo.vercel.app/" />
-            <meta name="twitter:image" content={concatImgURL} />
+            <meta name="twitter:image" content={getUrlImageFrontPage} />
             <meta name="twitter:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
             <meta name="twitter:description" content={ pageDescription } />
             

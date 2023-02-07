@@ -14,13 +14,13 @@ const PostPage = ({ source, frontMatter, posts }) => {
     const { asPath } = useRouter();
     const slug = asPath.slice(7, asPath.length);
 
-    const { title, date, imgTitle, description, readingTime } = frontMatter;
+    const { title, date, imgTitle, description, readingTime, imageFrontPage } = frontMatter;
     const urlImg = `/img/posts/${imgTitle}`;
 
     const dateFormat = formatDate(date)
 
     return(
-        <BlogLayout title={title} pageDescription={`👨‍💻 - ${description}`} slug={asPath} posts={posts}>
+        <BlogLayout title={title} pageDescription={`👨‍💻 - ${description}`} slug={asPath} posts={posts} urlImageFrontPage={imageFrontPage}>
             <section className="container-post-byslug">
                 <div className="container-content-post">
                    
