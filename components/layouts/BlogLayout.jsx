@@ -12,7 +12,6 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
         <Head>
             <title>{title}</title>
             <meta name="robots" content="index,follow"/>
-            <meta name="decription" property="og:description" content={ pageDescription } />
 
             {/* Google / Search Engine Tags  */}
             <meta itemProp="name" content="Blog - ArmandoCode 👨‍💻" />
@@ -20,11 +19,11 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
             <meta itemProp="image" content={getUrlImageFrontPage} />
 
             {/* Facebook Meta Tags */}
-            <meta property="og:title" content={ title } />
-            <meta property="og:url" content="https://armando-murillo.vercel.app/" />
-            <meta property="og:type" content="website" />
-            <meta property="og:image" content={getUrlImageFrontPage} />
-            <meta property="og:image:alt" content="Imagen del blog" />
+            <meta name="title" property="og:title" content={ title } />
+            <meta name="url" property="og:url" content="https://blog-armandocode.vercel.app/" />
+            <meta name="type" property="og:type" content="website" />
+            <meta name="decription" property="og:description" content={ pageDescription } />
+            <meta name="image" property="og:image" content={getUrlImageFrontPage} />
 
             {/* Twitter Meta Tags */}
             <meta name="twitter:site" content="@Armando_Code" />
@@ -32,7 +31,7 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:domain" content="armando-murillo.vercel.app" />
             <meta name="twitter:title" content={ title } />
-            <meta name="twitter:url" content="https://armando-murillo.vercel.app/" />
+            <meta name="twitter:url" content="https://blog-armandocode.vercel.app/" />
             <meta name="twitter:image" content={getUrlImageFrontPage} />
             <meta name="twitter:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
             <meta name="twitter:description" content={ pageDescription } />
