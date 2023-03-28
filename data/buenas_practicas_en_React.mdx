@@ -1,0 +1,114 @@
+---
+title: '4 buenas prácticas para React'
+date: '2023-03-27'
+imgTitle: 'react.png'
+description: 'Conoce 4 buenas prácticas en React que te ayudarán a tener un código mucho más accesible.⚡'
+readingTime: '2:00 min'
+imageFrontPage: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1679963035/publicaciones%20del%20blog/ktlaetlwg7dzgo3rsjf0.jpg'
+---
+
+React es una de las librerías más populares para el desarrollo de aplicaciones web en la actualidad. Si bien es una herramienta poderosa, 
+su complejidad puede ser un desafío para los desarrolladores, especialmente aquellos que son nuevos en ella. Es por eso que en este artículo 
+vamos a presentar 4 buenas prácticas en React que pueden ayudar a los desarrolladores a crear aplicaciones más eficientes, escalables y fáciles de mantener. 
+Estas prácticas son esenciales para mejorar la calidad del código y la experiencia del usuario. Si está buscando mejorar sus habilidades en React, 
+asegúrese de leer este artículo y poner en práctica estas buenas prácticas en su próximo proyecto. 👨‍💻
+
+## 1. Cuando tus props son de tipo String, no uses llaves para enviar dichas props.
+
+❌
+
+```jsx
+return <User name={"Armando"} />;
+```
+
+✅
+
+```jsx
+return <User name="Armando" />;
+```
+
+## 2. Si necesitas envolver varios elementos, usa fragmentos de React en lugar de usar elementos de HTML como un div.
+
+❌
+
+```jsx
+return (
+    <div>
+        <h1>{props.title}</h1>
+        <p>{props.description}</p>
+    </div>
+);
+```
+
+✅
+
+```jsx
+return (
+    <>
+        <h1>{props.title}</h1>
+        <p>{props.description}</p>
+    </>
+);
+```
+
+## 3. Destructura los objetos para pasar múltiples props a un componente.
+
+❌
+
+```jsx
+const { title, description } = props;
+return(
+    <>
+        <User 
+            name={title} 
+            age={description} 
+        />
+    </>
+);
+```
+
+✅
+
+```jsx
+return(
+    <>
+        <User {...props}/>
+    </>
+);
+```
+
+## 4. Si necesitas ejecutar cierta funcionalidad dependendiendo de un valor, usa un objeto en vez de un switch.
+
+❌
+
+```jsx
+const handleAction = (action) => {
+    switch (action) {
+        case 'add':
+            return add();
+        case 'remove':
+            return remove();
+        case 'update':
+            return update();
+        default:
+            return null;
+    }
+}
+```
+
+✅
+
+```jsx
+const handleAction = (action) => {
+    const actions = {
+        add: add,
+        remove: remove,
+        update: update
+    };
+    return actions[action]();
+}
+```
+
+En resumen, React es una herramienta poderosa pero compleja, y para hacer un buen uso de ella, es importante seguir buenas 
+prácticas en su desarrollo. En este artículo, hemos presentado 4 de estas prácticas que pueden ayudar a los desarrolladores a 
+crear aplicaciones más eficientes, escalables y fáciles de mantener. 😉
