@@ -1,0 +1,40 @@
+---
+title: 'DOM Vs Virtual DOM'
+date: '2023-05-11'
+imgTitle: 'react.png'
+description: 'Conoce qué es el DOM, el Virtual DOM y lo que los diferencia entre ellos.'
+readingTime: '2:00 min'
+imageFrontPage: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1683854880/publicaciones%20del%20blog/awx9hnlnvqsxvvhzmpps.png'
+---
+
+Es importante conocer la diferencia entre el DOM (Document Object Model) y el Virtual DOM cuando se es desarrollador de React, porque 
+ambos conceptos están relacionados con la forma en que se maneja y actualiza la interfaz de usuario en una aplicación web.
+
+## ¿Qué es el DOM?
+
+El DOM es una representación de la estructura de un documento HTML. Es una interfaz que permite a los programas y scripts acceder y 
+actualizar el contenido, estructura y estilo de un documento HTML.
+
+## ¿Qué es el Virtual DOM?
+
+El Virtual DOM es una copia del DOM que React mantiene en memoria y que se actualiza cada vez que se realiza un cambio en la interfaz de usuario.
+Este se sincroniza con el DOM real por medio de la librería **ReactDom**. Y sirve para mejorar el rendimiento de la aplicación, ya que React compara 
+el Virtual DOM con el DOM real y solo actualiza y repinta únicamente los elementos que han cambiado.
+Lo anteriormente mencionado se le conoce como *Algoritmo de Diffing*, y es su principal diferencia con el DOM real.
+
+Veámos la siguiente imagen. 👀
+
+![auto_close_tag](/img/posts/dom_vs-virtualDom/grafica.png)
+
+1. **State Change:** En este primero, se produce un cambio en el nodo de color morado, lo que provoca que se genere un Virtal DOM en memoria con el
+árbol resultante tras el cambio.
+
+2. **Compute diff**: En este segundo paso, se realiza la comparación por medio del **algoritmo de Diffing** entre el árbol del Virtual DOM
+ y el DOM Real para conocer los cambios generados en la interfaz. Como se ve en el gráfico, el cambio afecta a toda la rama descendiente del nodo 
+cuyo estado cambió.
+
+3. **Re-render:** Finalmente, se realiza el cambio en el DOM real y la interfaz gráfica se vuelve a renderizar de golpe con los cambios actualizados.
+
+En conclusión, como desarrollador de React es importante comprender la diferencia entre el DOM y el Virtual DOM. El DOM representa la estructura HTML 
+de una página web y es utilizado por los navegadores para manipular y actualizar la interfaz de usuario. Por otro lado, el Virtual DOM es una abstracción 
+utilizada por React para optimizar la actualización del DOM. 👨‍💻
