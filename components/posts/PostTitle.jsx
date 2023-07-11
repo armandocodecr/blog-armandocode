@@ -13,7 +13,7 @@ export const PostTitle = ({ urlImage, title, date, readingTime, slug }) => {
                     <h1>{title}</h1>
                     <p>
                         <a 
-                        href="https://www.linkedin.com/in/armando-murillo/" 
+                        href="https://www.linkedin.com/in/armandocode/" 
                         target='_blank' 
                         rel="noreferrer">Armando Murillo
                         </a> 
@@ -26,7 +26,7 @@ export const PostTitle = ({ urlImage, title, date, readingTime, slug }) => {
                 <p>
                     < FaGithub style={{ color: 'white' }} /> 
                     ¿Ves alguna errata o quiere sugerir algo? 
-                    <a href={`https://github.com/Armandocm19/blog-armandocode/blob/main/data/${slug}.mdx`} target='_blank' rel="noreferrer">
+                    <a href={`https://github.com/armandocodecr/blog-armandocode/blob/main/data/${slug}.mdx`} target='_blank' rel="noreferrer">
                         Haz un pull request
                     </a>
                 </p>
