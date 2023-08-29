@@ -1,7 +1,15 @@
+import { useEffect } from "react";
 import Head from "next/head"
 import { Footer, Navbar } from "../ui";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, children }) => {
+  
+  useEffect(() => {
+    AOS.init();
+  }, [])
+  
 
   const getUrlImageFrontPage = urlImageFrontPage 
     ? urlImageFrontPage 
@@ -38,7 +46,7 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
             
         </Head>
 
-        <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="u-center">
+        <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="u-center" data-aos="fade-down">
             <Navbar posts={posts} />
         </nav>
 
