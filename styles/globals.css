@@ -180,59 +180,6 @@ ul{
   padding: 0 10px;
 }
 
-.container-posts-social{
-  width: 70%;
-  display: flex;
-  padding: 0 10px;
-  flex-direction: column;
-}
-
-.posts-podcast{
-  display: flex;
-  flex-direction: column;
-}
-
-.posts-podcast iframe{
-  width: 100%;
-}
-
-.posts-youtube{
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.1s ease-in,
-  transform 0.1s ease-in;
-}
-
-.posts-youtube:hover{
-  background-color: #1da0f233;
-}
-
-.posts-youtube:active{
-  transform: scale(1.1); 
-}
-
-
-.posts-youtube picture img{
-  width: 100%;
-  border-radius: 10px;
-}
-
-.posts-youtube h4{
-  color: white;
-  margin: 0;
-}
-
-.posts-youtube a{
-  text-decoration: none;
-}
-
-.container-posts h1, .container-posts-social h1{
-  font-size: 30px;
-  color: #1da0f2;
-  padding-left: 10px;
-}
-
 .posts{
   display: flex;
   flex-direction: row;
