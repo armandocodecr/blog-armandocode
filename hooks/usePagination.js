@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 export const usePagination = ({ posts }) => {
 
     const [prevPage, setPrevPage] = useState(0)
-    const [nextPage, setNextPage] = useState(3)
+    const [nextPage, setNextPage] = useState(5)
     const [arrayPages, setArrayPages] = useState(posts)
 
     useEffect(() => {
@@ -17,13 +17,13 @@ export const usePagination = ({ posts }) => {
     
     const changePage = (next) => {
         if( next ) {
-            setNextPage(state => state + 4)
-            setPrevPage(state => state + 4)
+            setNextPage(state => state + 6)
+            setPrevPage(state => state + 6)
             return;
         }
 
-        setNextPage(state => state - 4)
-        setPrevPage(state => state - 4)
+        setNextPage(state => state - 6)
+        setPrevPage(state => state - 6)
     }
 
     return {
