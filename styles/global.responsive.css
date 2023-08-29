@@ -27,6 +27,15 @@
 
     /* Componente PostCard */
 
+    .container-postList{
+        grid-template-columns: 100%;
+    }
+
+    .article-container-post {
+        margin-top: 0;
+        padding: 0;
+    }
+
     .container-title-card h2{
         font-size: 20px;
     }
@@ -145,7 +154,7 @@
     }
 
     .container-postList{
-        gap: 50px;
+        gap: 20px;
     }
 
     .container-posts{
@@ -239,7 +248,11 @@
     #container-aditional-info p{
         font-size: 10px;
     }
-      
+
+    .title-info-autor{
+        gap: 10px;
+    }
+
 
     code{
         padding: 3px;
@@ -274,9 +287,5 @@
     .container-info-autor h2{
         font-size: 25px;
     }
-
-    .title-info-autor{
-        gap: 30px;
-      }
 
 }

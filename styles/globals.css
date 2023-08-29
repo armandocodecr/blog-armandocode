@@ -1,16 +1,21 @@
+/* Estilos globales */
+
+html {
+  background-color: #000000;
+}
+
 body{
   width: 100%;
   overflow-x: hidden;
   min-height: 100vh;
   /* padding: 0px 20ch; */
-  background-color: #000d29f5;
+  background-image: radial-gradient(rgba(148, 148, 148, 0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
 }
-
-/* Estilos globales */
 
 body h1{
   font-family: 'Work Sans', sans-serif;
@@ -52,7 +57,7 @@ body p {
 }
 
 .container-postTitle p{
-  color: rgba(255, 255, 255, 0.589);
+  color: rgba(255, 255, 255, 0.788);
 }
 
 /* Componente Navbar */
@@ -110,7 +115,7 @@ ul{
   padding: 10px 20px;
   border-radius: 10px;
   color: #0077B5;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: 1px;
   outline: none;
@@ -128,8 +133,11 @@ ul{
   min-width: 350px;
   height: auto;
   padding: 5px;
-  border-radius: 5px;
-  background-color: #3c4654;
+  backdrop-filter: blur(6px) saturate(0%);
+  -webkit-backdrop-filter: blur(6px) saturate(0%);
+  background-color: rgba(7, 7, 7, 0.76);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
   z-index: 1;
 }
 
@@ -220,7 +228,9 @@ ul{
 }
 
 .container-posts h1, .container-posts-social h1{
+  font-size: 30px;
   color: #1da0f2;
+  padding-left: 10px;
 }
 
 .posts{
@@ -234,7 +244,7 @@ ul{
   display: flex;
   gap: 15px;
   margin-top: 20px;
-  margin-left: 20px;
+  justify-content: center;
 }
 
 .container-arrows button{
@@ -243,13 +253,13 @@ ul{
 }
 
 .btn-arrow{
-  font-size: 20px;
+  font-size: 30px;
   color: #1da0f2;
   cursor: pointer;
   transition: all .2s ease-in-out;
 }
 
-.btn-arrow:active{
+.btn-arrow:hover{
   transform: scale(1.3); 
 }
 
@@ -272,7 +282,8 @@ ul{
 }
 
 .container-info-autor h1{
-  font-size: 24px;
+  font-size: 30px;
+  padding-left: 10px;
 }
 
 .container-info-autor p{
@@ -280,10 +291,14 @@ ul{
 }
 
 .container-info-autor img{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  shape-outside: circle(50%);
+  width: 150px;
+  height: 200px;
+  border-radius: 10%;
+  /* shape-outside: circle(50%); */
+  image-rendering: auto;
+  object-fit: contain;
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
 }
 
 .container-info-autor h2{
@@ -303,16 +318,26 @@ ul{
 
 .container-postList{
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 50% 50%;
   gap: 20px;
 }
 
 .article-container-post{
   background-color: transparent;
+  min-height: 150px;
   border-radius: 10px;
   margin-top: 20px;
+  padding: 10px;
   transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+}
+
+#post-date{
+  color: #1da0f2;
+}
+
+#post-desc{
+  padding-top: 15px;
 }
 
 .article-container-post h2{
@@ -321,7 +346,10 @@ ul{
 }
 
 .article-container-post:hover{
-  background-color: #0076b51c;
+  backdrop-filter: blur(1px) saturate(0%);
+  -webkit-backdrop-filter: blur(1px) saturate(0%);
+  background-color: rgba(17, 17, 17, 0.77);
+  border-radius: 12px;
 }
 
 .article-container-post:active{
@@ -329,13 +357,13 @@ ul{
 }
 
 .article-container-post img{
-  min-width: 9vh;
-  width: 10vh;
-  height: 8vh;
+  min-width:7vh;
+  width: 8vh;
+  height: 7vh;
 }
 
 .container-title-card{
-  width: 60%;
+  width: 100%;
   min-width: 300px;
   padding-left: 20px;
 }
@@ -369,7 +397,7 @@ ul{
 
 .container-content-post{
   width: 100%;
-  max-width: 75ch;
+  max-width: 90ch;
   position: relative;
   display: flex;
   align-items: flex-start;
@@ -467,11 +495,12 @@ code.hljs{
 
 footer{
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
   height: 20px;
   margin-top: 50px;
   padding-bottom: 35px;
-  border-top: 1px solid #0076b563;
+  background-color: #000000;
+  border-top: 1px solid #cacaca63;
 }
 
 footer h3{
@@ -479,6 +508,11 @@ footer h3{
   justify-content: center;
   font-size: 15px;
   font-weight: 400;
-  color: #1da0f2;
+  color: #ffffffa1;
 }
 
+
+footer h3 > span{
+  padding-left: 4px;
+  color: rgb(255, 197, 77);
+}
