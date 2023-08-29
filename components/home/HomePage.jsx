@@ -4,7 +4,6 @@ import { usePagination } from "@/hooks"
 
 import { ButtonsPagination } from "./buttons/ButtonsPagination"
 import { About } from "./about/About"
-import { Social } from "./social/Social"
 
 export const HomePage = ( {posts} ) => {
 
@@ -30,10 +29,6 @@ export const HomePage = ( {posts} ) => {
                 </section>
 
             </div>
-
-            <section className="container-posts-social">
-                <Social />
-            </section>
                
         </section>
     )
