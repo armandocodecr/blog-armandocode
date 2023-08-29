@@ -180,6 +180,11 @@ ul{
   padding: 0 10px;
 }
 
+.container-posts h1{
+  color: #1da0f2 !important;
+  font-size: 30px;
+}
+
 .posts{
   display: flex;
   flex-direction: row;
