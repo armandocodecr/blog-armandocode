@@ -1,38 +1,15 @@
-import { useState, useEffect } from "react"
-
 import Image from "next/image"
 import Link from "next/link"
 import Logo from '../../public/img/Logo.png'
 import { FaGithub, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa'
 
-import { formatDate } from "@/utils"
+import { useSearch } from "@/hooks"
+import { PostsResults } from "."
 
 
 export const Navbar = ({ posts }) => {
 
-    const [searchQuery, setSearchQuery] = useState('')
-    const [hideSearchMenu, setHideSearchMenu] = useState('disabled')
-    const [postSeached, setPostSearched] = useState([])
-
-    const concatUrlImage = (imageName) =>{
-        return `/img/posts/${imageName}`
-    }
-
-    useEffect(() => {
-        if( searchQuery ){
-            setHideSearchMenu('actived')
-            setPostSearched(posts.filter(post => {
-                let search = searchQuery.toLowerCase()
-                let titlePost = post.title.toLowerCase()
-               if( titlePost.includes(search) ){
-                return post
-               }
-            }))
-        }else{
-            setHideSearchMenu('disabled')
-        }
-        
-    }, [searchQuery, posts])
+    const { searchQuery, setSearchQuery, hideSearchMenu, postSeached } = useSearch(posts)
 
     return (
         <>
@@ -62,28 +39,12 @@ export const Navbar = ({ posts }) => {
                         <FaLinkedin className="navbar-icons" id="linkedin"/>
                     </a>
                 </div>
-                <div className={`menu-search ${ hideSearchMenu }`}>
-                    {
-                        postSeached.length !== 0 ? (
-                            postSeached.map(({ title, date, imgTitle, slug }) =>( 
-                                <Link href={`/posts/${ slug }`} key={ slug } style={{ textDecoration: 'none' }}>
-                                    <article className="container-postTitle search-container-post">
-                                        <Image src={concatUrlImage( imgTitle )} alt="imagen del titulo" width={20} height={20}/>
-                                        <div className="search-title-card">
-                                            <h2>{ title }</h2>
-                                            <p>{ formatDate( date) }</p>
-                                        </div>
-                                    </article>
-                                </Link>
-                            ))
-                        )
-                        : (
-                            <article className="container-postTitle search-container-post">
-                            <p>{`No hay resultados sobre: "${searchQuery}"  `}</p>
-                            </article>
-                        )
-                    }
-                </div>
+                
+               <PostsResults 
+                    hideSearchMenu={hideSearchMenu} 
+                    postSeached={postSeached} 
+                    searchQuery={searchQuery} 
+               />
             </ul>
         
         </>
