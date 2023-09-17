@@ -37,7 +37,6 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
             <meta name="twitter:site" content="@Armando_Code" />
             <meta name="twitter:creator" content="@Armando_Code" />
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:domain" content="armando-murillo.vercel.app" />
             <meta name="twitter:title" content={ title } />
             <meta name="twitter:url" content="https://blog-armandocode.vercel.app/" />
             <meta name="twitter:image" content={getUrlImageFrontPage} />
