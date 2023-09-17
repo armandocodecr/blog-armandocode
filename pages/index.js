@@ -10,7 +10,7 @@ export default function Home({ posts }) {
     <>
       <BlogLayout 
       title='Blog - ArmandoCode 👨‍💻' 
-      pageDescription='ArmandoCode 👨‍💻 - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe.' 
+      pageDescription='ArmandoCode 👨‍💻 - Soy un simple desarrollador web que quiere compartir con los demás lo que aprende día con día. 👨‍💻' 
       posts={posts}
       urlImageFrontPage='https://res.cloudinary.com/dyuj1zglt/image/upload/v1675369455/dgdytbnah1tsm6jsa9yt.png'
       >

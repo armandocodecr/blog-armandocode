@@ -45,7 +45,7 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
             <meta name="twitter:title" content={ title } />
             <meta name="twitter:url" content="https://blog-armandocode.vercel.app/" />
             <meta name="twitter:image" content={urlImageFrontPage} />
-            <meta name="twitter:image:alt" content="ArmandoCode - Desarrollador Web al que le encanta programar, y compartir con los demás lo que sabe. 🙆‍♂️" />
+            <meta name="twitter:image:alt" content="ArmandoCode 👨‍💻 - Soy un simple desarrollador web que quiere compartir con los demás lo que aprende día con día. 👨‍💻" />
             <meta name="twitter:description" content={ pageDescription } />
             
         </Head>
