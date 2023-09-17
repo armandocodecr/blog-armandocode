@@ -25,11 +25,12 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
             <meta itemProp="image" content={urlImageFrontPage} />
 
             {/* Facebook Meta Tags */}
-            <meta name="title" property="og:title" content={ title } />
-            <meta name="url" property="og:url" content="https://blog-armandocode.vercel.app/" />
-            <meta name="type" property="og:type" content="website" />
-            <meta name="decription" property="og:description" content={ pageDescription } />
-            <meta name="image" property="og:image" content={urlImageFrontPage} />
+            <meta property="og:title" content={ title } />
+            <meta property="og:url" content="https://blog-armandocode.vercel.app/" />
+            <meta property="og:type" content="website" />
+            <meta property="og:description" content={ pageDescription } />
+            <meta property="description" content={ pageDescription } />
+            <meta property="og:image" content={urlImageFrontPage} />
 
             <link
               rel="canonical"
