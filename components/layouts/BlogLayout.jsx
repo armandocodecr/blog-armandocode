@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { usePathname } from 'next/navigation';
 import Head from "next/head"
 import { Footer, Navbar } from "../ui";
 import AOS from 'aos';
@@ -9,6 +10,8 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
   useEffect(() => {
     AOS.init();
   }, [])
+
+  const pathname = usePathname();
   
   return (
     <>
@@ -28,6 +31,12 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
             <meta name="decription" property="og:description" content={ pageDescription } />
             <meta name="image" property="og:image" content={urlImageFrontPage} />
 
+            <link
+              rel="canonical"
+              href={`https://blog-armandocode.vercel.app${pathname}`}
+              key="canonical"
+            />
+
             {/* Twitter Meta Tags */}
             <meta name="twitter:site" content="@Armando_Code" />
             <meta name="twitter:creator" content="@Armando_Code" />
@@ -43,7 +52,7 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
         <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="u-center" data-aos="fade-down">
             <Navbar posts={posts} />
         </nav>
-
+ 
         <main
         >
             { children }
