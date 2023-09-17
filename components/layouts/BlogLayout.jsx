@@ -9,7 +9,7 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
   useEffect(() => {
     AOS.init();
   }, [])
-  console.log(urlImageFrontPage)
+  
   return (
     <>
         <Head>
