@@ -9,7 +9,7 @@ export const PostTitle = ({ urlImage, title, date, readingTime, slug }) => {
         
             <div className="container-postTitle container-postTitle-byslug">
                 <Image src={urlImage} width={75} height={75} alt="imagen del titulo" id="img-title" />
-                <div className="container-title-card">
+                <aside className="container-title-card">
                     <h1>{title}</h1>
                     <p>
                         <a 
@@ -20,7 +20,7 @@ export const PostTitle = ({ urlImage, title, date, readingTime, slug }) => {
                         | { date } 
                     </p>
                     <p style={{ display: 'flex', alignItems: 'center' }}><FaClock style={{ paddingRight: 5 }} />{`${readingTime} de lectura`}</p>
-                </div>
+                </aside>
             </div>
             <div id="container-aditional-info">
                 <p>

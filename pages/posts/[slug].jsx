@@ -26,9 +26,9 @@ const PostPage = ({ source, frontMatter, posts }) => {
                    
                    <PostTitle urlImage={urlImg} title={title} date={dateFormat} readingTime={readingTime} slug={slug} />
 
-                    <div style={{ position: 'relative', width: '100%' }} id="content-post">
+                    <article style={{ position: 'relative', width: '100%' }} id="content-post">
                         <MDXRemote {...source} />
-                    </div>
+                    </article>
                 </div>
             </section>
         </BlogLayout>
