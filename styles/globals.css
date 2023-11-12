@@ -1,31 +1,53 @@
 /* Estilos globales */
 
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
 html {
-  background-color: #000000;
+  background-color: #111111;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #EEEEEE !important;
+  font-family: 'Lexend Deca', sans-serif !important;
+}
+
+body,
+input,
+p,
+li,
+a {
+  color: #EEEEEE !important;color: #CDCDCD !important;font-family: 'Questrial', sans-serif !important;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+  padding-top: 22px;
+  height: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #616161;
+  border-radius: 5px;
 }
 
 body{
   width: 100%;
   overflow-x: hidden;
   min-height: 100vh;
-  /* padding: 0px 20ch; */
-  background-image: radial-gradient(rgba(148, 148, 148, 0.3) 1px, transparent 1px);
   background-size: 20px 20px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
-}
-
-body h1{
-  font-family: 'Work Sans', sans-serif;
-}
-
-body h2 {
-  font-family: 'Arsenal', sans-serif;
 }
 
 body p {
+  color: #b4b4b4 !important;
   font-family: 'Work Sans', sans-serif;
 }
 
@@ -111,7 +133,7 @@ ul{
 .input-navbar{
   background-color: transparent;
   border: none;
-  border: 1px solid #0077B5;
+  border: 1px solid #5c5c5c;
   padding: 10px 20px;
   border-radius: 10px;
   color: #0077B5;
@@ -171,6 +193,7 @@ ul{
 /* Componente HomePage */
 
 .container-content{
+  padding-bottom: 5%;
   display: flex;
   flex-direction: row;
   gap: 50px ;
@@ -181,8 +204,19 @@ ul{
 }
 
 .container-posts h1{
-  color: #1da0f2 !important;
+  color: #EEEEEE !important;
   font-size: 30px;
+}
+
+.container-posts > aside {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 50px;
+}
+
+.container-posts > aside > h1{
+  margin: 0 !important;
 }
 
 .posts{
@@ -280,7 +314,6 @@ ul{
   min-height: 150px;
   border-radius: 10px;
   margin-top: 20px;
-  padding: 10px;
   transition: background-color .2s ease-in-out, transform .2s ease-in-out;
 }
 
@@ -304,7 +337,7 @@ ul{
   border-radius: 12px;
 }
 
-.article-container-post:active{
+.article-container-post:hover{
   transform: scale(1.05); 
 }
 
@@ -317,7 +350,6 @@ ul{
 .container-title-card{
   width: 100%;
   min-width: 300px;
-  padding-left: 20px;
 }
 
 .container-title-card a{
@@ -334,10 +366,33 @@ ul{
   padding-left: 25px;
 }
 
+/* All blogs */
+
+.u-center-all-blogs{
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.container-content-all-blogs{
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px ;
+}
+
+.container-all-blogs{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
+
 
 /* Componente posts/[slug] */
 
 .container-post-byslug{
+  padding-bottom: 50px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -429,7 +484,7 @@ ul{
 
 code{
   padding: 2px 5px;
-  background-color: #1da0f233 !important;
+  background-color: #5e5e5e91 !important;
   border-radius: 3px;
 }
 
@@ -441,31 +496,4 @@ code.hljs{
 #content-post ol {
   padding-left: 20px;
   font-weight: bold;
-}
-
-/* Componente Footer */
-
-footer{
-  margin: 0 auto;
-  width: 100%;
-  height: 20px;
-  margin-top: 50px;
-  padding-bottom: 35px;
-  background-color: #000000;
-  border-top: 1px solid #cacaca63;
-}
-
-footer h3{
-  display: flex;
-  justify-content: center;
-  font-size: 15px;
-  font-weight: 400;
-  color: #ffffffa1;
-}
-
-
-footer h3 > a{
-  padding-left: 4px;
-  color: rgb(255, 197, 77);
-  cursor: pointer;
 }

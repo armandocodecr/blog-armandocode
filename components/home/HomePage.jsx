@@ -1,13 +1,13 @@
+import Link from "next/link"
 import { PostsLists } from "../posts"
 
 import { usePagination } from "@/hooks"
 
-import { ButtonsPagination } from "./buttons/ButtonsPagination"
 import { About } from "./about/About"
 
 export const HomePage = ( {posts} ) => {
 
-    const { changePage, arrayPages, prevPage, nextPage } = usePagination({posts})
+    const { arrayPages } = usePagination({posts})
 
     return (
         <section className="container-content u-center">
@@ -16,13 +16,12 @@ export const HomePage = ( {posts} ) => {
                 <section className="container-postList">
                     < PostsLists posts={arrayPages} />
                 </section>
-
-                <ButtonsPagination 
-                    nextPage={nextPage} 
-                    prevPage={prevPage} 
-                    changePage={changePage} 
-                    postsLength={posts.length} 
-                />
+                <Link 
+                    href="/All"
+                    style={{ fontSize: 20 }}
+                >
+                    Ver todo
+                </Link>
 
                 <section className="container-info-autor">
                     <About />

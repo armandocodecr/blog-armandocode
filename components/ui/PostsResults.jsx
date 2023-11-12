@@ -1,24 +1,20 @@
-import Image from "next/image"
 import Link from "next/link"
 import { formatDate } from "@/utils"
 
 export function PostsResults({ hideSearchMenu, postSeached, searchQuery }) {
+
+  console.log(postSeached)
+
   return (
     <div className={`menu-search ${hideSearchMenu}`}>
       {postSeached.length !== 0 ? (
-        postSeached.map(({ title, date, imgTitle, slug }) => (
+        postSeached.sort((a,b) => new Date(b.date) - new Date(a.date)).map(({ title, date, slug }) => (
           <Link
             href={`/posts/${slug}`}
             key={slug}
             style={{ textDecoration: "none" }}
           >
             <article className="container-postTitle search-container-post">
-              <Image
-                src={`/img/posts/${imgTitle}`}
-                alt="imagen del titulo"
-                width={20}
-                height={20}
-              />
               <div className="search-title-card">
                 <h2>{title}</h2>
                 <p>{formatDate(date)}</p>

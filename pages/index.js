@@ -7,16 +7,14 @@ import { HomePage } from '../components/home'
 export default function Home({ posts }) {
 
   return (
-    <>
       <BlogLayout 
-      title='Blog - ArmandoCode 👨‍💻' 
-      pageDescription='ArmandoCode 👨‍💻 - Soy un simple desarrollador web que quiere compartir con los demás lo que aprende día con día. 👨‍💻' 
-      posts={posts}
-      urlImageFrontPage='https://res.cloudinary.com/dyuj1zglt/image/upload/v1675369455/dgdytbnah1tsm6jsa9yt.png'
+        title='Blog - ArmandoCode 👨‍💻' 
+        pageDescription='ArmandoCode 👨‍💻 - Soy un simple desarrollador web que quiere compartir con los demás lo que aprende día con día. 👨‍💻' 
+        posts={posts}
+        urlImageFrontPage='https://res.cloudinary.com/dyuj1zglt/image/upload/v1675369455/dgdytbnah1tsm6jsa9yt.png'
       >
           < HomePage posts={posts} />
       </BlogLayout>
-    </>
   )
 }
 

@@ -13,7 +13,6 @@ export const Navbar = ({ posts }) => {
 
     return (
         <>
-        
             <ul style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap:'5px' }}>
                     <Link href='/'>

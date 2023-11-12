@@ -14,10 +14,10 @@ export const About = () => {
                     <h2>ArmandoCode</h2>
                 </div>
                 <p>
-                    Estudiante de Ing. Informática (2020 - 2023), Tengo más de 3 años especializandome en el área de 
-                    desarrollo web. Dedico gran parte de mi tiempo a crecer como desarrollador, generando experiencia
-                    desde la construcción de distintos proyectos. Y por otra parte, compartiendo todo recurso que le pueda
-                    ser de ayuda a cualquier otro desarrollador. <em>{`"Cuando uno enseña, dos aprenden."`}</em> - <strong>Robert Heinlein</strong>
+                Hola, soy Armando Murillo, y llevo más de 3 años especializándome en el área del desarrollo de software. 
+                Mi enfoque es crecer y evolucionar como desarrollador, trabajando en proyectos variados y compartiendo 
+                recursos que pueden beneficiar a otros en el campo del desarrollo de software. 
+                    <em>{`"Cuando uno enseña, dos aprenden."`}</em> - <strong>Robert Heinlein</strong>
                 </p>
             </div>
         </>

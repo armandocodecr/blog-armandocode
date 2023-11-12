@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { usePathname } from 'next/navigation';
 import Head from "next/head"
-import { Footer, Navbar } from "../ui";
+import { Navbar } from "../ui";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -58,11 +58,6 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
         >
             { children }
         </main>
-
-        <footer>
-            < Footer />
-        </footer>
-
     </>
   )
 }
