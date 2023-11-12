@@ -73,6 +73,18 @@
         font-size: 15px;
     }
 
+    .container-content{
+        padding-bottom: 50px !important;
+    }
+
+    .container-postList > div {
+        margin-top: 5px !important;
+    }
+
+    .container-postList > div > a {
+        font-size: 16px !important;
+    }
+
    /* Componente PostCard */
 
    .container-description-card{

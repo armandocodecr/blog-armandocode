@@ -12,8 +12,11 @@ export const HomePage = ({ posts }) => {
     <section className="container-content u-center">
       <div className="container-posts">
         <section className="container-postList">
+
           <h1>Ultimos posts</h1>
+
           <PostsLists posts={arrayPages} />
+          
           <div style={{ marginTop: 20 }}>
             <Link href="/All" style={{ fontSize: 20 }}>
               Ver todo
