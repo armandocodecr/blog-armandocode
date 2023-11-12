@@ -31,6 +31,10 @@
         grid-template-columns: 100%;
     }
 
+    #post-desc{
+        width: 90%;
+      }
+
     .article-container-post {
         margin-top: 0;
         padding: 0;
@@ -49,6 +53,11 @@
 @media screen and ( max-width: 700px ) {
 
     /* Estilos Navbar */
+
+    nav{
+        justify-content: space-between !important;
+        padding: 0 15px;
+    }
 
     nav .input-navbar{
         display: none;
@@ -73,6 +82,18 @@
    .container-title-card{
         width: 100%;
     }
+    .container-all-blogs{
+        gap: 50px;
+    }
+
+    .u-center-all-blogs{
+        padding-bottom: 50px !important;
+    }
+
+    .container-postList h1{
+        font-size: 30px;
+    }
+
 
     /* Componente posts/[slug] */
 
@@ -93,8 +114,8 @@
 
     /* Componente Navbar */
 
-    nav{
-        overflow: hidden;
+    nav {
+        gap: 10px !important;
     }
 
     nav h3 {

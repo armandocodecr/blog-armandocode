@@ -8,7 +8,9 @@ import 'aos/dist/aos.css';
 export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, children }) => {
   
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      offset: 50
+    });
   }, [])
 
   const pathname = usePathname();
@@ -50,9 +52,7 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
             
         </Head>
 
-        <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} className="u-center" data-aos="fade-down">
-            <Navbar posts={posts} />
-        </nav>
+        <Navbar posts={posts} />
  
         <main
         >

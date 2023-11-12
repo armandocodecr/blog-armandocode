@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 html {
+  overflow-x: hidden;
   background-color: #111111;
 }
 
@@ -21,6 +22,7 @@ body,
 input,
 p,
 li,
+button,
 a {
   color: #EEEEEE !important;color: #CDCDCD !important;font-family: 'Questrial', sans-serif !important;
 }
@@ -60,14 +62,16 @@ body p {
 }
 
 .u-center{
-  max-width: 1200px;
+  max-width: 90ch;
   margin: 0 auto;
 }
 
 .container-postTitle{
   display: flex;
-  align-items: center;
-  align-content: center;
+  flex-direction: column;
+  align-items: start;
+  align-content: start;
+  justify-content: start;
 }
 
 .container-postTitle h2, p{
@@ -84,10 +88,6 @@ body p {
 
 /* Componente Navbar */
 
-nav{
-  padding: 0px 20px;
-}
-
 ul{
   padding: 0;
 }
@@ -99,6 +99,14 @@ ul{
 
 #logo-navbar:hover {
   transform: scale(1.1); 
+}
+
+#social-media button {
+  background: transparent;
+  color: #EEEEEE;
+  outline: none;
+  border: none;
+  font-size: 1.17em;
 }
 
 .container-navbar-icons{
@@ -203,21 +211,32 @@ ul{
   width: 100%;
   height: auto;
   padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.container-posts h1{
+.container-all-blogs h1{
   color: #EEEEEE !important;
+  align-self: self-start;
   font-size: 30px;
 }
 
-.container-posts > aside {
+.container-all-blogs > section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.container-all-blogss > aside {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-top: 50px;
 }
 
-.container-posts > aside > h1{
+.container-all-blogs > aside > h1{
   margin: 0 !important;
 }
 
@@ -256,7 +275,8 @@ ul{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 75px;
+  gap: 20px !important;
 }
 
 .info-autor{
@@ -266,10 +286,10 @@ ul{
   align-items: center;
   flex-direction: row;
   gap: 20px;
-  margin-top: 10px;
 }
 
 .container-info-autor h1{
+  margin: 0 !important;
   font-size: 30px;
 }
 
@@ -305,25 +325,27 @@ ul{
 
 .container-postList{
   width: 100%;
-  display: grid;
-  grid-template-columns: 50% 50%;
+  max-width: 90ch;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
+}
+
+.container-postList > section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .article-container-post{
   background-color: transparent;
-  min-height: 150px;
+  height: auto;
   border-radius: 10px;
-  margin-top: 20px;
   transition: background-color .2s ease-in-out, transform .2s ease-in-out;
 }
 
 #post-date{
   color: #1da0f2;
-}
-
-#post-desc{
-  padding-top: 15px;
 }
 
 .article-container-post h2{
@@ -353,6 +375,7 @@ ul{
   min-width: 300px;
   display: flex;
   flex-direction: column;
+  justify-content: start;
   gap: 10px;
 }
 
@@ -360,8 +383,14 @@ ul{
   color: #0077B5;
 }
 
-.container-title-card p{
-  padding-top: 5px;
+.container-title-card > aside {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#post-desc{
+  padding-top: 2px !important;
 }
 
 .container-description-card{
@@ -390,6 +419,7 @@ ul{
   flex-direction: column;
   justify-content: center;
   margin-top: 50px;
+  gap: 50px;
 }
 
 

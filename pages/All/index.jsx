@@ -13,11 +13,11 @@ export default function AllBlogs ({ posts }) {
         >
             <section className="container-content-all-blogs u-center-all-blogs">
                 <div className="container-posts">
-                    <aside>
-                        <h1>Todos los posts</h1>
-                        <p>{`${posts.length} posts sobre programación, soft skills, tecnología y más...`}</p>
-                    </aside>
                     <div className="container-all-blogs">
+                        <aside>
+                            <h1>Todos los posts</h1>
+                            <p>{`${posts.length} posts sobre programación, soft skills, tecnología y más...`}</p>
+                        </aside>
                         <PostsLists posts={posts} />
                     </div>
                 </div>

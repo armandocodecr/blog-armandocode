@@ -3,7 +3,7 @@
 export const About = () => {
 
     return (
-        <>
+        <section className="container-info-autor">
             <h1>Sobre mi</h1>
 
             <div className="info-autor" data-aos="fade-right">
@@ -20,7 +20,7 @@ export const About = () => {
                     <em>{`"Cuando uno enseña, dos aprenden."`}</em> - <strong>Robert Heinlein</strong>
                 </p>
             </div>
-        </>
+        </section>
     )
 
 }

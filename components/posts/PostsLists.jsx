@@ -6,7 +6,7 @@ export const PostsLists = ({ posts }) => {
     const postsSort = posts.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     
     return(
-        <>
+        <section>
             {
                 postsSort.map(post => (
                     < PostCard 
@@ -19,6 +19,6 @@ export const PostsLists = ({ posts }) => {
                     />
                 ))
             }
-        </>
+        </section>
     )
 }

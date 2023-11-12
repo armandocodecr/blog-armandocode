@@ -12,8 +12,12 @@ export const Navbar = ({ posts }) => {
     const { searchQuery, setSearchQuery, hideSearchMenu, postSeached } = useSearch(posts)
 
     return (
-        <>
-            <ul style={{ display: 'flex', flexDirection: 'column' }}>
+        <nav 
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 100 }} 
+            className="u-center" 
+            data-aos="fade-down"
+        >
+            <ul style={{ display: 'flex', flexDirection: 'column', alignSelf: "flex-start" }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap:'5px' }}>
                     <Link href='/'>
                         <Image src={Logo} width={50} height={50} id="logo-navbar" alt="logo-armandocode" />
@@ -46,7 +50,7 @@ export const Navbar = ({ posts }) => {
                />
             </ul>
         
-        </>
+        </nav>
     )
 
 }
