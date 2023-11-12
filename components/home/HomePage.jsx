@@ -16,12 +16,15 @@ export const HomePage = ( {posts} ) => {
                 <section className="container-postList">
                     < PostsLists posts={arrayPages} />
                 </section>
-                <Link 
-                    href="/All"
-                    style={{ fontSize: 20 }}
-                >
-                    Ver todo
-                </Link>
+
+                <div style={{ marginTop: 20 }}>
+                    <Link 
+                        href="/All"
+                        style={{ fontSize: 20 }}
+                    >
+                        Ver todo
+                    </Link>
+                </div>
 
                 <section className="container-info-autor">
                     <About />

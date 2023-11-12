@@ -8,15 +8,17 @@ export const PostTitle = ({ urlImage, title, date, readingTime, slug }) => {
             <div className="container-postTitle container-postTitle-byslug" data-aos="fade-up">
                 <aside className="container-title-card">
                     <h1>{title}</h1>
-                    <p>
-                        <a 
-                        href="https://www.linkedin.com/in/armandocode/" 
-                        target='_blank' 
-                        rel="noreferrer">Armando Murillo
-                        </a> 
-                        | { date } 
-                    </p>
-                    <p style={{ display: 'flex', alignItems: 'center' }}><FaClock style={{ paddingRight: 5 }} />{`${readingTime} de lectura`}</p>
+                    <aside>
+                        <p>
+                            <a 
+                            href="https://www.linkedin.com/in/armandocode/" 
+                            target='_blank' 
+                            rel="noreferrer">Armando Murillo
+                            </a> 
+                            | { date } 
+                        </p>
+                        <p style={{ display: 'flex', alignItems: 'center' }}><FaClock style={{ paddingRight: 5 }} />{`${readingTime} de lectura`}</p>
+                    </aside>
                 </aside>
             </div>
             <div id="container-aditional-info" data-aos="fade-up">
