@@ -331,6 +331,10 @@ ul{
   gap: 20px;
 }
 
+.container-postList > h1 {
+  font-size: 30px;
+}
+
 .container-postList > section {
   display: flex;
   flex-direction: column;
