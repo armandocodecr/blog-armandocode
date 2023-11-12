@@ -29,16 +29,16 @@ export const Navbar = ({ posts }) => {
             <ul style={{ display: 'flex', gap: '20px'}}>
                 <input type="text" placeholder="Buscar..." className="input-navbar" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                 <div className="container-navbar-icons">
-                    <a href="https://github.com/armandocodecr" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/armandocodecr" target="_blank" rel="noreferrer" aria-label="Mi github">
                         <FaGithub className="navbar-icons" id="git"/>
                     </a>
-                    <a href="https://www.instagram.com/armandocodecr/" target="_blank" rel="noreferrer">
+                    <a href="https://www.instagram.com/armandocodecr/" target="_blank" rel="noreferrer" aria-label="Mi instagram">
                         <FaInstagram className="navbar-icons" id="instagram"/>
                     </a>
-                    <a href="https://twitter.com/Armando_Code" target="_blank" rel="noreferrer">
+                    <a href="https://twitter.com/Armando_Code" target="_blank" rel="noreferrer" aria-label="Mi twitter">
                         <FaTwitter className="navbar-icons" id="twitter"/>
                     </a>
-                    <a href="https://www.linkedin.com/in/armandocode/" target="_blank" rel="noreferrer">
+                    <a href="https://www.linkedin.com/in/armandocode/" target="_blank" rel="noreferrer" aria-label="Mi linkedin">
                         <FaLinkedin className="navbar-icons" id="linkedin"/>
                     </a>
                 </div>

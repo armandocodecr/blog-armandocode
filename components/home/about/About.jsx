@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 
 export const About = () => {
@@ -9,7 +10,13 @@ export const About = () => {
             <div className="info-autor" data-aos="fade-right">
                 <div className="title-info-autor">
                     <picture>
-                        <img src="/img/foto.png" alt="Aqui muestro una imagen de mi persona" />
+                        {/* <img src="/img/foto.png" alt="Aqui muestro una imagen de mi persona" /> */}
+                        <Image
+                            width={1000}
+                            height={1000}
+                            src={"/img/foto.png"} 
+                            alt="picture profile"
+                        />
                     </picture>
                     <h2>ArmandoCode</h2>
                 </div>

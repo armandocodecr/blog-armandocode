@@ -8,9 +8,7 @@ import 'aos/dist/aos.css';
 export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, children }) => {
   
   useEffect(() => {
-    AOS.init({
-      offset: 50
-    });
+    AOS.init();
   }, [])
 
   const pathname = usePathname();

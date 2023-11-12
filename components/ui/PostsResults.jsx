@@ -3,8 +3,6 @@ import { formatDate } from "@/utils"
 
 export function PostsResults({ hideSearchMenu, postSeached, searchQuery }) {
 
-  console.log(postSeached)
-
   return (
     <div className={`menu-search ${hideSearchMenu}`}>
       {postSeached.length !== 0 ? (
