@@ -20,7 +20,7 @@ export const BlogLayout = ({ title, pageDescription, posts, urlImageFrontPage, c
             <meta name="robots" content="index,follow"/>
 
             {/* Google / Search Engine Tags  */}
-            <meta itemProp="name" content="Blog - ArmandoCode 👨‍💻" />
+            <meta itemProp="name" content="Blog | ArmandoCode 👨‍💻" />
             <meta itemProp="description" content="ArmandoCode 👨‍💻 - Soy un desarrollador de Software, y aqui te compartiré información que te encantará sobre programación." />
             <meta itemProp="image" content={urlImageFrontPage} />
 
