@@ -1,13 +1,10 @@
 import Link from "next/link";
 import { PostsLists } from "../posts";
 
-import { usePagination } from "@/hooks";
-
 import { About } from "./about/About";
 
 export const HomePage = ({ posts }) => {
-  const { arrayPages } = usePagination({ posts });
-
+  const arrayPages = posts.slice(0,4)
   return (
     <section className="container-content u-center">
       <div className="container-posts">

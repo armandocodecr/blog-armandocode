@@ -5,7 +5,8 @@
 
 html {
   overflow-x: hidden;
-  background-color: #111111;
+  background-color: #121212;
+  background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0));
 }
 
 h1,
@@ -345,6 +346,7 @@ ul{
   background-color: transparent;
   height: auto;
   border-radius: 10px;
+  padding: 10px;
   transition: background-color .2s ease-in-out, transform .2s ease-in-out;
 }
 
