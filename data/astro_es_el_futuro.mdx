@@ -1,0 +1,75 @@
+---
+title: 'Astro es el futuro 🔥'
+date: '2024-04-12'
+imgTitle: 'astro.svg'
+description: 'Crear páginas sumamente rápidas cargando la menor cantidad de Javascript es posible con este maravilloso framework llamado Astro.⚡'
+readingTime: '3:20 min'
+imageFrontPage: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1712952178/publicaciones%20del%20blog/rptdanvbip4rmvkrsw1i.png'
+---
+
+![banner](https://res.cloudinary.com/dyuj1zglt/image/upload/v1712952178/publicaciones%20del%20blog/rptdanvbip4rmvkrsw1i.png)
+
+Astro es un framework como muchos que ya conocemos para crear páginas web. En sus inicios fué creado para crear páginas estáticas,
+pero a evolucionado a tal punto de que puedes crear cualquier tipo de páginas.
+Este es un framework que escala contigo como bien ellos lo dicen en su página web, ya que tienen una gran experiencia de usuario y además sus páginas 
+son súmamente rápidas gracias a las optimizaciones que este realiza.
+Y es que este framework no carga nada de javascript por defecto en comparación a otros frameworks o librerías. Además de todos estos beneficios 
+que se obtienen internamente con Astro, podemos realizar apis dinámicas que funcionen con este mismo y escalar nuestras aplicaciones a otro nivel.
+
+## Qué es lo que hace que Astro funcione tan bien?
+
+Astro hace uso de una nueva arquitectura que cada vez se utiliza más llamada "Islas". Qué quiere decir esto de "Islas"?
+Esta es una arquitectura utilizada en el frontend para cargar javascript solo en pequeñas zonas de la web donde sea requerido.
+Esto quiere decir que si toda tu página contiene contenido estático pero solo hay una parte que requiere de Javascript, entonces solo esa área de 
+la web cargará javascript ya que necesitamos que sea dinámico, el resto de la página continuará siendo estática, lo cual hace a la página muy óptima.
+
+Esto es algo que marca mucho la diferencia, ya que si lo comparas por ejemplo con otros frameworks como NextJS, este con solo el hecho de iniciar 
+el proyecto ya está cargando algo de Javascript. En este caso de NextJS es algo que ha ido mejorando con los **react server components**, pero 
+hoy en día aún la carga de javascript en proyectos de NextJS sigue siendo considerable.
+
+Resultado de esto lo podemos observar en la siguienta gráfica que proporciona la gente de Astro.
+
+![ejemplo_bubbling](/img/posts/astro_es_el_futuro/grafica.png)
+
+Otra de las cosas que hace tan maravilloso a Astro es que este es agnóstico a la libreria de UI que quieras utilizar en tu proyecto. Esto es algo que no sucede 
+con otros frameworks, ya que por ejemplo si tu quieres utilizar Nuxt debes utilizar Vue, si quieres utilizar Next debes usar React, y así con otros casos más.
+Esto con Astro no sucede, ya que no está atado a ninguna librería. Lo puedes utilizar con React, Vue, SolidJS, con lo que quieras. Es más, si quieres utilizar
+a nivel de componente React y Vue a la vez, lo puedes hacer.
+
+## AstroDB
+
+Como si fuese poco, hace no mucho Astro sacó su propia base de datos la cuál es manejada con SQL y además tiene una capa gratuita muy generosa para que empieces
+a crear tus base de datos con AstroDB.
+Además de todo esto, utilizarlo es muy fácil, ya hace uso de un ORM, en este caso el de **Drizzel**. 
+
+Un ejemplo para crear una tabla e insertarle datos es el siguiente:
+
+```js
+// Configure el esquema de su base de datos
+const Comments = defineTable({
+  columns: {
+    authorId: column.text(),
+    postId: column.text(),
+    body: column.text(),
+    published: column.date({ default: NOW() }),
+  }
+})
+
+// Insertar un nuevo registro de comentario
+await db.insert(Comments).values({
+  authorId: "12345",
+  postId: blogPostId,
+  body,
+})
+
+```
+
+Además de todo esto tiene una plataforma donde podrás observar tus bases de datos, la estructura de tus tablas, su contenido, y ejecutar comandos
+de SQL para crees tus consultas utilizando tus propios datos.
+
+
+Sin duda alguna Astro será uno de esos frameworks que marcan y marcarán la diferencia. Yo personalmente lo e estado probando y me parece increíble.
+Te recomiendo a ojos cerrados que comiences a aprender Astro, ya que quizás ahorita empreserialmente no es muy utilizado debido a que es un framework
+relativamente nuevo, pero a futuro tiene una muy buena proyección y más con la rapidéz con la que crece.
+
+Informate más sobre Astro en su página oficial: [Página oficial de Astro](https://astro.build/)
