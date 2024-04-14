@@ -111,6 +111,7 @@
 
     .container-post-byslug{
         padding: 0px 16px;
+        padding-bottom: 4rem;
     }
 
    /* Componentes Frames */
@@ -221,7 +222,7 @@
     }
 
     #content-post a{
-        font-size: 22px !important;
+        font-size: 15px !important;
       }
 
 
